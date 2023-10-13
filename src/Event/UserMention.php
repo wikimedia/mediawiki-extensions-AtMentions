@@ -33,7 +33,7 @@ class UserMention extends TitleEvent {
 	 * @return Message
 	 */
 	public function getKeyMessage(): Message {
-		return Message::newFromKey( 'ext-at-mentions-mention-notification-key' );
+		return Message::newFromKey( 'at-mentions-mention-notification-key' );
 	}
 
 	/**
@@ -47,7 +47,7 @@ class UserMention extends TitleEvent {
 	 * @return Message
 	 */
 	public function getMessage(): Message {
-		return Message::newFromKey( 'ext-at-mentions-mention-notification-message' )->params(
+		return Message::newFromKey( 'at-mentions-mention-notification-message' )->params(
 			$this->getTitleDisplayText()
 		);
 	}

@@ -50,14 +50,14 @@ class UserMentionInEntity extends UserMention {
 	 * @return Message
 	 */
 	public function getKeyMessage(): Message {
-		return Message::newFromKey( 'ext-at-mentions-mention-in-entity-notification-key' );
+		return Message::newFromKey( 'at-mentions-mention-in-entity-notification-key' );
 	}
 
 	/**
 	 * @return Message
 	 */
 	public function getMessage(): Message {
-		return Message::newFromKey( 'ext-at-mentions-mention-in-entity-notification-message' )->params(
+		return Message::newFromKey( 'at-mentions-mention-in-entity-notification-message' )->params(
 			$this->getTitleDisplayText(),
 			$this->getSnippet()
 		);
@@ -72,7 +72,7 @@ class UserMentionInEntity extends UserMention {
 		return parent::getLinks() + [
 			new EventLink(
 				$this->title->getFullURL(),
-				Message::newFromKey( 'ext-at-mentions-mention-in-entity-notification-post-link' )
+				Message::newFromKey( 'at-mentions-mention-in-entity-notification-post-link' )
 			)
 		];
 	}

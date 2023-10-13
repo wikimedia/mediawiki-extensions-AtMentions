@@ -2,7 +2,7 @@ ext.atMentions.ui.MentionContextItem = function() {
 	// Parent constructor
 	ext.atMentions.ui.MentionContextItem.super.apply( this, arguments );
 
-	this.$element.addClass( 'ext-at-mentions-context-item' );
+	this.$element.addClass( 'at-mentions-context-item' );
 };
 
 /* Inheritance */
@@ -16,7 +16,7 @@ ext.atMentions.ui.MentionContextItem.static.modelClasses = [ ext.atMentions.dm.U
 
 ext.atMentions.ui.MentionContextItem.static.icon = 'userAvatar';
 
-ext.atMentions.ui.MentionContextItem.static.label = mw.message( 'ext-at-mentions-ci-title' ).text();
+ext.atMentions.ui.MentionContextItem.static.label = mw.message( 'at-mentions-ci-title' ).text();
 
 ext.atMentions.ui.MentionContextItem.static.embeddable = false;
 

@@ -7,7 +7,7 @@ OO.inheritClass( ext.atMentions.tools.MentionTool, ve.ui.Tool );
 ext.atMentions.tools.MentionTool.static.name = 'mention';
 ext.atMentions.tools.MentionTool.static.group = 'dialog';
 ext.atMentions.tools.MentionTool.static.icon = 'at-mention';
-ext.atMentions.tools.MentionTool.static.title = mw.message( 'ext-at-mentions-toolbar-tool-title' ).plain();
+ext.atMentions.tools.MentionTool.static.title = mw.message( 'at-mentions-toolbar-tool-title' ).plain();
 ext.atMentions.tools.MentionTool.static.commandName = 'userMention';
 ext.atMentions.tools.MentionTool.static.autoAddToCatchall = false;
 ext.atMentions.tools.MentionTool.static.autoAddToGroup = false;

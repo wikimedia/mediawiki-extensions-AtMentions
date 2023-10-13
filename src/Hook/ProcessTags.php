@@ -67,15 +67,15 @@ class ProcessTags implements ParserFirstCallInitHook {
 		}
 		if ( $user->getName() === $parser->getUserIdentity()->getName() ) {
 			if ( $days !== -1 ) {
-				$headerMsg = $this->msg( 'ext-at-mentions-mentionslist-header-mine' )->params( $days );
+				$headerMsg = $this->msg( 'at-mentions-mentionslist-header-mine' )->params( $days );
 			} else {
-				$headerMsg = $this->msg( 'ext-at-mentions-mentionslist-header-mine-all' );
+				$headerMsg = $this->msg( 'at-mentions-mentionslist-header-mine-all' );
 			}
 		} else {
 			if ( $days !== -1 ) {
-				$headerMsg = $this->msg( 'ext-at-mentions-mentionslist-header' )->params( $days, $user );
+				$headerMsg = $this->msg( 'at-mentions-mentionslist-header' )->params( $days, $user );
 			} else {
-				$headerMsg = $this->msg( 'ext-at-mentions-mentionslist-header-all' );
+				$headerMsg = $this->msg( 'at-mentions-mentionslist-header-all' );
 			}
 		}
 
@@ -110,11 +110,11 @@ class ProcessTags implements ParserFirstCallInitHook {
 		$html .= Html::rawElement( 'span', [], $link . ' ' );
 		$html .= Html::rawElement(
 			'span', [],
-			$this->msg( 'ext-at-mentions-tag-item-actor' )->params( $author )->parse() . ' '
+			$this->msg( 'at-mentions-tag-item-actor' )->params( $author )->parse() . ' '
 		);
 		$html .= Html::rawElement(
 			'span', [],
-			$this->msg( 'ext-at-mentions-tag-item-time' )->params( $timestamp )->parse()
+			$this->msg( 'at-mentions-tag-item-time' )->params( $timestamp )->parse()
 		);
 		$html .= Html::closeElement( 'li' );
 		return $html;

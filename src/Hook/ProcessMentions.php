@@ -6,6 +6,7 @@ use AtMentions\Event\UserMention;
 use AtMentions\Mention;
 use AtMentions\MentionParser;
 use AtMentions\MentionStore;
+use AtMentions\Notifications\MentionNotification;
 use ManualLogEntry;
 use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\Hook\ParserBeforeInternalParseHook;
@@ -20,6 +21,7 @@ use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Storage\Hook\PageSaveCompleteHook;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
+use MWStake\MediaWiki\Component\Notifications\INotifier as EchoNotifier;
 use Title;
 use TitleFactory;
 use User;
@@ -46,22 +48,27 @@ class ProcessMentions implements
 	/** @var TitleFactory */
 	protected $titleFactory;
 
+	/** @var EchoNotifier|null */
+	protected $echoNotifier;
+
 	/**
 	 * @param MentionParser $parser
 	 * @param MentionStore $mentionStore
 	 * @param RevisionStore $revisionStore
 	 * @param Notifier $notifier
 	 * @param TitleFactory $titleFactory
+	 * @param EchoNotifier $echoNotifier
 	 */
 	public function __construct(
-		MentionParser $parser, MentionStore $mentionStore,
-		RevisionStore $revisionStore, Notifier $notifier, TitleFactory $titleFactory
+		MentionParser $parser, MentionStore $mentionStore, RevisionStore $revisionStore,
+		Notifier $notifier, TitleFactory $titleFactory, EchoNotifier $echoNotifier
 	) {
 		$this->parser = $parser;
 		$this->store = $mentionStore;
 		$this->revisionStore = $revisionStore;
 		$this->notifier = $notifier;
 		$this->titleFactory = $titleFactory;
+		$this->echoNotifier = $echoNotifier;
 	}
 
 	/**
@@ -201,6 +208,11 @@ class ProcessMentions implements
 		$this->notifier->emit(
 			new UserMention(
 				$mentionedUser, $actor, $this->getTitleFromLinkTarget( $revisionRecord->getPageAsLinkTarget() )
+			)
+		);
+		$this->echoNotifier->notify(
+			new MentionNotification(
+				$actor, $mentionedUser, $this->getTitleFromLinkTarget( $revisionRecord->getPageAsLinkTarget() )
 			)
 		);
 	}

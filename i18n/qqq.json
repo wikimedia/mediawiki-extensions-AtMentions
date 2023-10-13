@@ -18,5 +18,12 @@
 	"at-mentions-mention-in-entity-notification-key": "Key for notification message if user has been mentioned in a comment or a post",
 	"at-mentions-mention-in-entity-notification-message": "Title of notification message if user has been mentioned in a comment or a post",
 	"at-mentions-mention-in-entity-notification-post-link": "Title of go directly to post link",
-	"at-mentions-toolbar-tool-title": "Title of tool in toolbar to add a user mention"
+	"at-mentions-toolbar-tool-title": "Title of tool in toolbar to add a user mention",
+	"at-mentions-echo-mention-notification-summary": "Notification summary message",
+	"at-mentions-echo-mention-notification-web-body": "Web notification text.\n$1 - page title\n$2 - agent\n$3 - agent real name",
+	"at-mentions-echo-mention-notification-subject": "Email notification subject.\n$1 - page title\n$2 - agent\n$3 - agent real name",
+	"at-mentions-echo-mention-notification-email-body": "Email notification text.\n$1 - page title\n$2 - agent\n$3 - agent real name",
+	"at-mentions-echo-mention-entity-notification-summary": "Notification summary message.\n$1 - page title\n$2 - agent\n$3 - agent real name",
+	"at-mentions-echo-mention-entity-notification-subject": "Email notification subject.\n$1 - page title\n$2 - agent\n$3 - agent real name",
+	"at-mentions-echo-mention-entity-notification-email-body": "Email notification text.\n$1 - page title\n$2 - agent\n$3 - agent real name"
 }
