@@ -1,7 +1,9 @@
 {
+	"@metadata": {
+		"authors": []
+	},
 	"at-mentions-desc": "Description of AtMentions for [[Special:Version]]",
 	"at-mentions-inspector-title": "Title of inspector to add a user mention",
-	"at-mentions-toolbar-tool-title": "Title of tool in toolbar to add a user mention",
 	"at-mentions-inspector-title-add": "Title of inspector to add a user mention",
 	"at-mentions-inspector-title-edit": "Title of inspector to edit a user mention",
 	"at-mentions-ci-title": "Title of user mention",
@@ -15,5 +17,6 @@
 	"at-mentions-mention-notification-key": "Key for notification message if user has been mentioned",
 	"at-mentions-mention-in-entity-notification-key": "Key for notification message if user has been mentioned in a comment or a post",
 	"at-mentions-mention-in-entity-notification-message": "Title of notification message if user has been mentioned in a comment or a post",
-	"at-mentions-mention-in-entity-notification-post-link": "Title of go directly to post link"
+	"at-mentions-mention-in-entity-notification-post-link": "Title of go directly to post link",
+	"at-mentions-toolbar-tool-title": "Title of tool in toolbar to add a user mention"
 }

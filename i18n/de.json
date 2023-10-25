@@ -1,5 +1,10 @@
 {
-	"at-mentions-desc": "Deutsche Beschreibung von AtMentions",
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"at-mentions-desc": "Eine Benutzererwähnung hinzufügen",
 	"at-mentions-inspector-title": "Einen Benutzer erwähnen",
 	"at-mentions-inspector-title-add": "Eine Erwähnung hinzufügen",
 	"at-mentions-inspector-title-edit": "Erwähnung bearbeiten",
