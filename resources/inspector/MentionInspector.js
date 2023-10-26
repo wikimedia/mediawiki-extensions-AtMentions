@@ -1,6 +1,8 @@
-ext.atMentions.ui.UserMentionInspector = function( config ) {
+ext.atMentions.ui.UserMentionInspector = function ( config ) {
 	// Parent constructor
-	ext.atMentions.ui.UserMentionInspector.super.call( this, ve.extendObject( { padded: true }, config ) );
+	ext.atMentions.ui.UserMentionInspector.super.call(
+		this, ve.extendObject( { padded: true }, config )
+	);
 
 	this.$element.addClass( 'ext-atMentions-ui-userMentionInspector' );
 };
@@ -24,7 +26,7 @@ ext.atMentions.ui.UserMentionInspector.static.modelClasses = [
  * @inheritdoc
  */
 ext.atMentions.ui.UserMentionInspector.prototype.initialize = function () {
-	ext.atMentions.ui.UserMentionInspector.parent.prototype.initialize.call ( this );
+	ext.atMentions.ui.UserMentionInspector.parent.prototype.initialize.call( this );
 	this.userPicker = new OOJSPlus.ui.widget.UserPickerWidget( {
 		$overlay: true,
 		allowSuggestionsWhenEmpty: true
@@ -56,12 +58,15 @@ ext.atMentions.ui.UserMentionInspector.prototype.getAnnotationFromFragment = fun
 
 /**
  * Handle annotation input change events
+ *
+ * @param {any} user
+ * @return {void}
  */
+// eslint-disable-next-line no-unused-vars
 ext.atMentions.ui.UserMentionInspector.prototype.onUserChoose = function ( user ) {
 	this.updateActions();
 	this.onFormSubmit();
 };
-
 
 ext.atMentions.ui.UserMentionInspector.prototype.makeAnnotation = function () {
 	var user = this.userPicker.getSelectedUser();
@@ -70,6 +75,8 @@ ext.atMentions.ui.UserMentionInspector.prototype.makeAnnotation = function () {
 
 /**
  * Update the actions based on the annotation state
+ *
+ * @return {void}
  */
 ext.atMentions.ui.UserMentionInspector.prototype.updateActions = function () {
 	var isValid = false,
@@ -77,13 +84,13 @@ ext.atMentions.ui.UserMentionInspector.prototype.updateActions = function () {
 		annotation = this.makeAnnotation();
 
 	this.userPicker.getValidity()
-	.then( function () { isValid = true; } )
-	.always( function () {
-		isValid = isValid && !!annotation;
-		inspector.actions.forEach( { actions: [ 'done', 'insert' ] }, function ( action ) {
-			action.setDisabled( !isValid );
+		.then( function () { isValid = true; } )
+		.always( function () {
+			isValid = isValid && !!annotation;
+			inspector.actions.forEach( { actions: [ 'done', 'insert' ] }, function ( action ) {
+				action.setDisabled( !isValid );
+			} );
 		} );
-	} );
 };
 
 /**
@@ -128,20 +135,20 @@ ext.atMentions.ui.UserMentionInspector.prototype.setFromAnnotation = function ( 
  */
 ext.atMentions.ui.UserMentionInspector.prototype.getSetupProcess = function ( data ) {
 	return ext.atMentions.ui.UserMentionInspector.super.prototype.getSetupProcess.call( this, data )
-	.next( function () {
-		var title = ve.msg(
+		.next( function () {
+			var title = ve.msg(
 				this.isReadOnly() ?
-					'at-mentions-inspector-title' : (
+					'ext-at-mentions-inspector-title' : (
 						this.isNew ?
-							'at-mentions-inspector-title-add' :
-							'at-mentions-inspector-title-edit'
+							'ext-at-mentions-inspector-title-add' :
+							'ext-at-mentions-inspector-title-edit'
 					)
 			);
-		this.title.setLabel( title ).setTitle( title );
-		this.setFromAnnotation( this.initialAnnotation );
+			this.title.setLabel( title ).setTitle( title );
+			this.setFromAnnotation( this.initialAnnotation );
 
-		this.updateActions();
-	}, this );
+			this.updateActions();
+		}, this );
 };
 
 /**
@@ -149,13 +156,13 @@ ext.atMentions.ui.UserMentionInspector.prototype.getSetupProcess = function ( da
  */
 ext.atMentions.ui.UserMentionInspector.prototype.getReadyProcess = function ( data ) {
 	return ext.atMentions.ui.UserMentionInspector.super.prototype.getReadyProcess.call( this, data )
-	.next( function () {
-		if ( !OO.ui.isMobile() ) {
+		.next( function () {
+			if ( !OO.ui.isMobile() ) {
+				this.userPicker.focus();
+			}
+			this.userPicker.setValidityFlag( true );
 			this.userPicker.focus();
-		}
-		this.userPicker.setValidityFlag( true );
-		this.userPicker.focus();
-	}, this );
+		}, this );
 };
 
 /**
@@ -164,9 +171,9 @@ ext.atMentions.ui.UserMentionInspector.prototype.getReadyProcess = function ( da
 ext.atMentions.ui.UserMentionInspector.prototype.getHoldProcess = function ( data ) {
 	// Intentionally different parent class, we need parent of parent
 	return ve.ui.LinkAnnotationInspector.super.prototype.getHoldProcess.call( this, data )
-	.next( function () {
-		this.userPicker.$input.blur();
-	}, this );
+		.next( function () {
+			this.userPicker.$input.trigger( 'blur' );
+		}, this );
 };
 
 /**
@@ -176,13 +183,13 @@ ext.atMentions.ui.UserMentionInspector.prototype.getTeardownProcess = function (
 	var fragment;
 	// Intentionally different parent class, we need parent of parent
 	return ve.ui.LinkAnnotationInspector.super.prototype.getTeardownProcess.call( this, data )
-	.first( function() {
-		fragment = this.getFragment();
-	}, this )
-	.next( function () {
-		this.userPicker.setValue( '' );
-		fragment.adjustLinearSelection( 3, 0 );
-	}, this );
+		.first( function () {
+			fragment = this.getFragment();
+		}, this )
+		.next( function () {
+			this.userPicker.setValue( '' );
+			fragment.adjustLinearSelection( 3, 0 );
+		}, this );
 };
 
 // #getInsertionText call annotationInput#getHref, which returns the link title,

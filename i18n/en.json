@@ -1,4 +1,7 @@
 {
+	"@metadata": {
+		"authors": []
+	},
 	"at-mentions-desc": "Add a user mention",
 	"at-mentions-inspector-title": "Mention a user",
 	"at-mentions-inspector-title-add": "Add a mention",
