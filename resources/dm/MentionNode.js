@@ -1,4 +1,4 @@
-ext.atMentions.dm.UserMentionAnnotation = function() {
+ext.atMentions.dm.UserMentionAnnotation = function () {
 	// Parent constructor
 	ext.atMentions.dm.UserMentionAnnotation.super.apply( this, arguments );
 };
@@ -14,10 +14,10 @@ ext.atMentions.dm.UserMentionAnnotation.static.name = 'link/userMention';
 ext.atMentions.dm.UserMentionAnnotation.static.matchTagNames = [ 'a' ];
 ext.atMentions.dm.UserMentionAnnotation.static.matchRdfaTypes = [ 'mw:WikiLink', 'mw:MediaLink' ];
 ext.atMentions.dm.UserMentionAnnotation.static.allowedRdfaTypes = [ 'mw:Error' ];
-ext.atMentions.dm.UserMentionAnnotation.static.matchFunction = function( domElement ) {
+ext.atMentions.dm.UserMentionAnnotation.static.matchFunction = function ( domElement ) {
 	var title = domElement.getAttribute( 'title' ),
-		titleObject,
-		namespaceIds = mw.config.get( 'wgNamespaceIds' );
+		namespaceIds = mw.config.get( 'wgNamespaceIds' ),
+		titleObject;
 	if ( !title ) {
 		return false;
 	}
@@ -35,12 +35,12 @@ ext.atMentions.dm.UserMentionAnnotation.static.matchFunction = function( domElem
 
 ext.atMentions.dm.UserMentionAnnotation.static.toDataElement = function ( domElements, converter ) {
 	var targetData = this.getTargetDataFromHref(
-		domElements[ 0 ].getAttribute( 'href' ),
-		converter.getTargetHtmlDocument()
-	),
+			domElements[ 0 ].getAttribute( 'href' ),
+			converter.getTargetHtmlDocument()
+		),
 		label = domElements[ 0 ].textContent;
 
-	if ( label === domElements[0].title ) {
+	if ( label === domElements[ 0 ].title ) {
 		label = null;
 	}
 
@@ -58,7 +58,9 @@ ext.atMentions.dm.UserMentionAnnotation.static.toDataElement = function ( domEle
 	};
 };
 
-ext.atMentions.dm.UserMentionAnnotation.static.dataElementFromUsername = function ( username, display ) {
+ext.atMentions.dm.UserMentionAnnotation.static.dataElementFromUsername = function (
+	username, display
+) {
 	return {
 		type: 'link/userMention',
 		attributes: {

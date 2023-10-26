@@ -1,4 +1,4 @@
-ext.atMentions.ui.MentionContextItem = function() {
+ext.atMentions.ui.MentionContextItem = function () {
 	// Parent constructor
 	ext.atMentions.ui.MentionContextItem.super.apply( this, arguments );
 
@@ -12,7 +12,9 @@ OO.inheritClass( ext.atMentions.ui.MentionContextItem, ve.ui.MWInternalLinkConte
 
 ext.atMentions.ui.MentionContextItem.static.name = 'link/userMention';
 
-ext.atMentions.ui.MentionContextItem.static.modelClasses = [ ext.atMentions.dm.UserMentionAnnotation ];
+ext.atMentions.ui.MentionContextItem.static.modelClasses = [
+	ext.atMentions.dm.UserMentionAnnotation
+];
 
 ext.atMentions.ui.MentionContextItem.static.icon = 'userAvatar';
 
@@ -26,9 +28,9 @@ ext.atMentions.ui.MentionContextItem.static.clearable = true;
 
 ext.atMentions.ui.MentionContextItem.static.clearIcon = 'unLink';
 
-
 ext.atMentions.ui.MentionContextItem.prototype.renderBody = function () {
 	var widget = new OOJSPlus.ui.widget.UserWidget( {
+		// eslint-disable-next-line camelcase
 		user_name: this.model.getAttribute( 'username' )
 	} );
 	this.$body.empty().append( widget.$element );
