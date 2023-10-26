@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Римма"
+		]
+	},
+	"at-mentions-inspector-title": "Казьмӧтны вӧдитчисьӧс",
+	"at-mentions-tag-item-actor": "{{GENDER:$1| [[User:$1]] сянь}}",
+	"at-mentions-mentionslist-header-all": "Вӧдитчись {{GENDER:$2|[[User:$2]] вӧлі казьмӧтӧма этна листбоккезын }}:"
+}
