@@ -5,6 +5,12 @@
 		]
 	},
 	"at-mentions-inspector-title": "Спомени корисника",
+	"at-mentions-inspector-title-add": "Додај спомињање",
+	"at-mentions-mentionslist-header-mine-all": "Споменути сте на овој страници",
 	"at-mentions-mention-notification-key": "Споменути сте",
-	"at-mentions-toolbar-tool-title": "Додај спомињање"
+	"at-mentions-toolbar-tool-title": "Додај спомињање",
+	"at-mentions-echo-mention-notification-summary": "Споменути сте на страници $1",
+	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2|$3 Вас је спомнуо|$3 Вас је споменула}}",
+	"at-mentions-echo-mention-notification-email-body": "Споменути сте на страници $1",
+	"at-mentions-echo-mention-entity-notification-summary": "Споменути сте у коментару на страници $1"
 }
