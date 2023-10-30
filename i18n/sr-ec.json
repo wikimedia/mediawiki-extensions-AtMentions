@@ -4,13 +4,22 @@
 			"Milicevic01"
 		]
 	},
+	"at-mentions-desc": "Пружа могућност спомињања корисника",
 	"at-mentions-inspector-title": "Спомени корисника",
 	"at-mentions-inspector-title-add": "Додај спомињање",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|[[User:$1]]}}",
 	"at-mentions-mentionslist-header-mine-all": "Споменути сте на овој страници",
+	"at-mentions-mention-notification-message": "споменуо Вас је на страници $1",
 	"at-mentions-mention-notification-key": "Споменути сте",
+	"at-mentions-mention-in-entity-notification-key": "Споменути сте у коментару или објави",
+	"at-mentions-mention-in-entity-notification-message": "споменуо Вас је у коментару или објави „$2” на страници $1",
+	"at-mentions-mention-in-entity-notification-post-link": "Иди на објаву",
 	"at-mentions-toolbar-tool-title": "Додај спомињање",
 	"at-mentions-echo-mention-notification-summary": "Споменути сте на страници $1",
-	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2|$3 Вас је спомнуо|$3 Вас је споменула}}",
+	"at-mentions-echo-mention-notification-web-body": "$3 Вас је {{GENDER:$2|споменуо|споменула}}",
+	"at-mentions-echo-mention-notification-subject": "$3 Вас је {{GENDER:$2|споменуо|споменула}} на страници $1",
 	"at-mentions-echo-mention-notification-email-body": "Споменути сте на страници $1",
-	"at-mentions-echo-mention-entity-notification-summary": "Споменути сте у коментару на страници $1"
+	"at-mentions-echo-mention-entity-notification-summary": "Споменути сте у коментару или објави на страници $1",
+	"at-mentions-echo-mention-entity-notification-subject": "$3 Вас је {{GENDER:$2|споменуо|споменула}} у коментару или објави на страници $1",
+	"at-mentions-echo-mention-entity-notification-email-body": "Споменути сте у коментару или објави на страници $1"
 }
