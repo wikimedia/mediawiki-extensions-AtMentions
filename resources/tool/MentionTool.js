@@ -1,4 +1,4 @@
-ext.atMentions.tools.MentionTool = function MentionTool () {
+ext.atMentions.tools.MentionTool = function MentionTool() {
 	ext.atMentions.tools.MentionTool.super.apply( this, arguments );
 };
 
@@ -11,7 +11,6 @@ ext.atMentions.tools.MentionTool.static.title = mw.message( 'at-mentions-toolbar
 ext.atMentions.tools.MentionTool.static.commandName = 'userMention';
 ext.atMentions.tools.MentionTool.static.autoAddToCatchall = false;
 ext.atMentions.tools.MentionTool.static.autoAddToGroup = false;
-
 
 /* Registration */
 

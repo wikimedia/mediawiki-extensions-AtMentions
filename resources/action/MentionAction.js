@@ -12,7 +12,7 @@ ext.atMentions.action.MentionAction.static.name = 'mention';
 
 ext.atMentions.action.MentionAction.static.methods = [ 'open' ];
 
-ext.atMentions.action.MentionAction.prototype.open = function() {
+ext.atMentions.action.MentionAction.prototype.open = function () {
 	this.surface.execute( 'window', 'open', 'userMention' );
 	return true;
 };
@@ -36,4 +36,3 @@ ve.ui.sequenceRegistry.register(
 ve.ui.sequenceRegistry.register(
 	new ve.ui.Sequence( 'userMentionNewline', 'userMention', [ { type: 'paragraph' }, '@' ], 1 )
 );
-

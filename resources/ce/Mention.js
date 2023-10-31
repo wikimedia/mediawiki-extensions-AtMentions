@@ -1,4 +1,4 @@
-ext.atMentions.ce.UserMentionAnnotation = function() {
+ext.atMentions.ce.UserMentionAnnotation = function () {
 	ext.atMentions.ce.UserMentionAnnotation.super.apply( this, arguments );
 	this.$element.addClass( 'ext-atMentions-ce-UserMentionAnnotation' );
 	this.$element.css( {
@@ -8,7 +8,7 @@ ext.atMentions.ce.UserMentionAnnotation = function() {
 		padding: '0 2px',
 		'border-radius': '2px'
 	} );
-	//this.$element.attr( 'rel', 'mw:WikiLink' );
+	// this.$element.attr( 'rel', 'mw:WikiLink' );
 };
 
 /* Inheritance */
