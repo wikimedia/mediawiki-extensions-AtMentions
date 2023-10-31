@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rulebased"
+		]
+	},
+	"at-mentions-echo-mention-notification-email-body": "شما در صفحه 1$ مورد اشاره قراره گرفته‌اید",
+	"at-mentions-echo-mention-entity-notification-email-body": "شما در نظری مربوط به یکی از ارسال‌های صفحه $1 مورد اشاره قرار گرفته‌اید"
+}
