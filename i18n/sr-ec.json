@@ -1,13 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Milicevic01"
+			"Milicevic01",
+			"Kizule"
 		]
 	},
 	"at-mentions-desc": "Пружа могућност спомињања корисника",
 	"at-mentions-inspector-title": "Спомени корисника",
 	"at-mentions-inspector-title-add": "Додај спомињање",
+	"at-mentions-inspector-title-edit": "Измени помињање корисника",
+	"at-mentions-ci-title": "Помињање корисника",
 	"at-mentions-tag-item-actor": "{{GENDER:$1|[[User:$1]]}}",
+	"at-mentions-tag-item-time": "у $1",
 	"at-mentions-mentionslist-header-mine-all": "Споменути сте на овој страници",
 	"at-mentions-mention-notification-message": "споменуо Вас је на страници $1",
 	"at-mentions-mention-notification-key": "Споменути сте",
