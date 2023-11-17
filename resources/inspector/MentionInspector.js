@@ -138,10 +138,10 @@ ext.atMentions.ui.UserMentionInspector.prototype.getSetupProcess = function ( da
 		.next( function () {
 			var title = ve.msg(
 				this.isReadOnly() ?
-					'ext-at-mentions-inspector-title' : (
+					'at-mentions-inspector-title' : (
 						this.isNew ?
-							'ext-at-mentions-inspector-title-add' :
-							'ext-at-mentions-inspector-title-edit'
+							'at-mentions-inspector-title-add' :
+							'at-mentions-inspector-title-edit'
 					)
 			);
 			this.title.setLabel( title ).setTitle( title );
