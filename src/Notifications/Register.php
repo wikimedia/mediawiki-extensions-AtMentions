@@ -9,10 +9,11 @@ class Register {
 	public static function registerNotifications() {
 		/** @var INotifier $notifier */
 		$notifier = MediaWikiServices::getInstance()->getService( 'MWStakeNotificationsNotifier' );
+
 		$notifier->registerNotification(
 			'at-mentions-mention-echo',
 			[
-				'category' => 'echo-category-title-mention',
+				'category' => 'mention',
 				'summary-params' => [
 					'title', 'agent', 'realname'
 				],
@@ -34,7 +35,7 @@ class Register {
 		$notifier->registerNotification(
 			'at-mentions-mention-in-entity-echo',
 			[
-				'category' => 'echo-category-title-mention',
+				'category' => 'mention',
 				'summary-params' => [
 					'title', 'agent', 'realname'
 				],
