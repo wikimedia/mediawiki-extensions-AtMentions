@@ -21,6 +21,9 @@ class MentionStore {
 	/** @var RevisionStore */
 	private $revisionStore;
 
+	/** @var array */
+	protected $conds = [];
+
 	/**
 	 * @param ILoadBalancer $loadBalancer
 	 * @param UserFactory $userFactory
