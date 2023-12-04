@@ -1,11 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"BlueCamille"
+			"BlueCamille",
+			"Gomoko"
 		]
 	},
 	"at-mentions-inspector-title-add": "Ajouter une mention",
 	"at-mentions-echo-mention-notification-summary": "Vous avez été mentionné à la page $1",
 	"at-mentions-echo-mention-notification-email-body": "Vous avez été mentionné à la page $1",
-	"at-mentions-echo-mention-entity-notification-summary": "Vous avez été mentionné dans un commentaire ou une publication dans $1"
+	"at-mentions-echo-mention-entity-notification-summary": "Vous avez été mentionné dans un commentaire ou une publication dans $1",
+	"at-mentions-desc": "Ajouter une mention d’utilisateur",
+	"at-mentions-inspector-title": "Mentionner un utilisateur",
+	"at-mentions-inspector-title-edit": "Modifier une mention d’utilisateur",
+	"at-mentions-ci-title": "Mention d’utilisateur",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|par [[User:$1]]}}",
+	"at-mentions-tag-item-time": "à $1"
 }

@@ -1,16 +1,32 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eleassar"
+			"Eleassar",
+			"Upwinxp"
 		]
 	},
 	"at-mentions-ci-title": "Omemba uporabnika",
 	"at-mentions-toolbar-tool-title": "Dodaj omembo",
 	"at-mentions-echo-mention-notification-summary": "Omenjeni ste bili na strani $1",
-	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2|$3 vas je omenil|$3 vas je omenila|$3 vas je omenil_a}}",
-	"at-mentions-echo-mention-notification-subject": "{{GENDER:$2|$3 vas je omenil|$3 vas je omenila|$3 vas je omenil_a}} na strani $1",
+	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2|$3 vas je omenil|$3 vas je omenila|$3 vas je omenil/a}}",
+	"at-mentions-echo-mention-notification-subject": "{{GENDER:$2|$3 vas je omenil|$3 vas je omenila|$3 vas je omenil/a}} na strani $1",
 	"at-mentions-echo-mention-notification-email-body": "Omenjeni ste bili na strani $1",
 	"at-mentions-echo-mention-entity-notification-summary": "Omenjeni ste bili v komentarju ali objavi na strani $1",
-	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2|$3 vas je omenil|$3 vas je omenila|$3 vas je omenil_a}} v komentarju ali objavi na strani $1",
-	"at-mentions-echo-mention-entity-notification-email-body": "Omenjeni ste bili v komentarju ali objavi na strani $1"
+	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2|$3 vas je omenil|$3 vas je omenila|$3 vas je omenil/a}} v komentarju ali objavi na strani $1",
+	"at-mentions-echo-mention-entity-notification-email-body": "Omenjeni ste bili v komentarju ali objavi na strani $1",
+	"at-mentions-desc": "Dodaj omembo uporabnika",
+	"at-mentions-inspector-title": "Omeni uporabnika",
+	"at-mentions-inspector-title-add": "Dodaj omembo",
+	"at-mentions-inspector-title-edit": "Uredi omembo uporabnika",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|od [[User:$1]]}}",
+	"at-mentions-tag-item-time": "ob $1",
+	"at-mentions-mentionslist-header-mine-all": "Omenjeni ste bili na tej strani",
+	"at-mentions-mentionslist-header-mine": "V {{PLURAL:$1|zadnjem dnevu|zadnjih $1 dneh}} ste bili omenjeni na teh straneh:",
+	"at-mentions-mentionslist-header-all": "{{GENDER:$2|Uporabnik [[User:$2]] je bil omenjen|Uporabnica [[User:$2]] je bila omenjena|Uporabnik_ca [[User:$2]] je bil_a omenjen_a na teh straneh}}:",
+	"at-mentions-mentionslist-header": "V {{PLURAL:$1|zadnjem dnevu|zadnjih $1 dneh}} {{GENDER:$2|je bil [[User:$2]] omenjen|je bila uporabnica [[User:$2]] omenjena|je bil_a uporabnik_ca [[User:$2]] omenjen_a}} na teh straneh:",
+	"at-mentions-mention-notification-message": "vas je {{PLURAL:|omenil|omenila|omenil_a}} na strani $1",
+	"at-mentions-mention-notification-key": "Bili ste omenjeni",
+	"at-mentions-mention-in-entity-notification-key": "Bili ste omenjeni v komentarju ali objavi",
+	"at-mentions-mention-in-entity-notification-message": "vas je {{PLURAL:|omenil|omenila|omenil_a}} v komentarju ali objavi »$2« na strani $1",
+	"at-mentions-mention-in-entity-notification-post-link": "Pojdi naravnost na objavo"
 }
