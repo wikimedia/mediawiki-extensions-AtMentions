@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"BlueCamille",
-			"Gomoko"
+			"Gomoko",
+			"Histnou"
 		]
 	},
 	"at-mentions-desc": "Ajouter une mention d’utilisateur",
@@ -12,6 +13,8 @@
 	"at-mentions-ci-title": "Mention d’utilisateur",
 	"at-mentions-tag-item-actor": "{{GENDER:$1|par [[User:$1]]}}",
 	"at-mentions-tag-item-time": "à $1",
+	"at-mentions-mentionslist-header-mine-all": "Vous avez été mentionné sur cette page.",
+	"at-mentions-mentionslist-header-mine": "Toupannan dényé {{PLURAL:$1| jou-la | sé-jou-lasa}} yo mansyiòné-w asi sé-paj-lasa:",
 	"at-mentions-echo-mention-notification-summary": "Vous avez été mentionné à la page $1",
 	"at-mentions-echo-mention-notification-email-body": "Vous avez été mentionné à la page $1",
 	"at-mentions-echo-mention-entity-notification-summary": "Vous avez été mentionné dans un commentaire ou une publication dans $1"
