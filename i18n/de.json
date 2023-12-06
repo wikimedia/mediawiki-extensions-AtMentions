@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"McDutchie",
-			"SehrGuterCode"
+			"SehrGuterCode",
+			"Wdwd translator"
 		]
 	},
 	"at-mentions-desc": "Eine Benutzererwähnung hinzufügen",
@@ -23,6 +24,8 @@
 	"at-mentions-mention-in-entity-notification-post-link": "Gehe direkt zum Beitrag",
 	"at-mentions-toolbar-tool-title": "Erwähnung hinzufügen",
 	"at-mentions-echo-mention-notification-summary": "Du wurdest auf Seite $1 erwähnt",
+	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2| $3 erwähnte}} Sie",
 	"at-mentions-echo-mention-notification-email-body": "Du wurdest auf Seite $1 erwähnt",
-	"at-mentions-echo-mention-entity-notification-summary": "Du wurdest in einem Kommentar oder einem Beitrag zu $1 erwähnt"
+	"at-mentions-echo-mention-entity-notification-summary": "Du wurdest in einem Kommentar oder einem Beitrag zu $1 erwähnt",
+	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2| $3 erwähnte}} Sie in einem Kommentar oder einem Beitrag auf Seite $1"
 }
