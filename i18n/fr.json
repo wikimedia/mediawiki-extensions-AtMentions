@@ -3,7 +3,8 @@
 		"authors": [
 			"BlueCamille",
 			"Gomoko",
-			"Histnou"
+			"Histnou",
+			"Wladek92"
 		]
 	},
 	"at-mentions-inspector-title-add": "Ajouter une mention",
@@ -17,5 +18,11 @@
 	"at-mentions-tag-item-actor": "{{GENDER:$1|par [[User:$1]]}}",
 	"at-mentions-tag-item-time": "à $1",
 	"at-mentions-mentionslist-header-mine-all": "Vous avez été mentionné sur cette page.",
-	"at-mentions-mentionslist-header-mine": "Toupannan dényé {{PLURAL:$1| jou-la | sé-jou-lasa}} yo mansyiòné-w asi sé-paj-lasa:"
+	"at-mentions-mentionslist-header-mine": "Toupannan dényé {{PLURAL:$1| jou-la | sé-jou-lasa}} yo mansyiòné-w asi sé-paj-lasa:",
+	"at-mentions-mention-notification-message": "vous a mentionné sur la page $1",
+	"at-mentions-mention-notification-key": "On vous a mentionné",
+	"at-mentions-mention-in-entity-notification-key": "On vous a mentionné dans un commentaire ou un billet",
+	"at-mentions-mention-in-entity-notification-message": "vous a mentionné dans un commentaire ou un billet «  $2 » de la page $1",
+	"at-mentions-toolbar-tool-title": "Ajouter une mention",
+	"at-mentions-echo-mention-entity-notification-email-body": "On vous a mentionné dans un commentaire ou un billet de la page $1"
 }
