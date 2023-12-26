@@ -24,5 +24,10 @@
 	"at-mentions-mention-in-entity-notification-key": "On vous a mentionné dans un commentaire ou un billet",
 	"at-mentions-mention-in-entity-notification-message": "vous a mentionné dans un commentaire ou un billet «  $2 » de la page $1",
 	"at-mentions-toolbar-tool-title": "Ajouter une mention",
-	"at-mentions-echo-mention-entity-notification-email-body": "On vous a mentionné dans un commentaire ou un billet de la page $1"
+	"at-mentions-echo-mention-entity-notification-email-body": "On vous a mentionné dans un commentaire ou un billet de la page $1",
+	"at-mentions-mentionslist-header-all": "L'utilisat{{GENDER:$2|eur|rice}} [[User:$2]] a été mentionné{{GENDER:$2||e}} sur les pages suivantes :",
+	"at-mentions-mentionslist-header": "Depuis {{PLURAL:$1|ce jour dernier|ces $1 derniers jours}}, l'utilisat{{GENDER:$2|eur|rice}} [[User:$2]] a été mentionné{{GENDER:$2||e}} sur les pages suivantes :",
+	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2|$3 vous a mentionné}}",
+	"at-mentions-echo-mention-notification-subject": "{{GENDER:$2|$3 vous a mentionné}} sur la page $1",
+	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2|$3 vous a mentionné}} dans un commentaire ou un billet sur la page $1"
 }
