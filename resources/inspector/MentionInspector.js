@@ -84,7 +84,9 @@ ext.atMentions.ui.UserMentionInspector.prototype.updateActions = function () {
 		annotation = this.makeAnnotation();
 
 	this.userPicker.getValidity()
-		.then( function () { isValid = true; } )
+		.then( function () {
+			isValid = true;
+		} )
 		.always( function () {
 			isValid = isValid && !!annotation;
 			inspector.actions.forEach( { actions: [ 'done', 'insert' ] }, function ( action ) {
