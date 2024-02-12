@@ -34,7 +34,7 @@ ext.atMentions.dm.UserMentionAnnotation.static.matchFunction = function ( domEle
 };
 
 ext.atMentions.dm.UserMentionAnnotation.static.toDataElement = function ( domElements, converter ) {
-	var targetData = this.getTargetDataFromHref(
+	var targetData = mw.libs.ve.getTargetDataFromHref(
 			domElements[ 0 ].getAttribute( 'href' ),
 			converter.getTargetHtmlDocument()
 		),
