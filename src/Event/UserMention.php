@@ -2,6 +2,7 @@
 
 namespace AtMentions\Event;
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use Message;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
@@ -50,5 +51,14 @@ class UserMention extends TitleEvent {
 		return Message::newFromKey( 'at-mentions-mention-notification-message' )->params(
 			$this->getTitleDisplayText()
 		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public static function getArgsForTesting(
+		UserIdentity $agent, MediaWikiServices $services, array $extra = []
+	): array {
+		return [];
 	}
 }
