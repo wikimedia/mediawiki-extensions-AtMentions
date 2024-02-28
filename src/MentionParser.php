@@ -31,6 +31,8 @@ class MentionParser {
 		$mentions = [];
 		$matches = [];
 		$nsInLang = $this->language->getNsText( NS_USER );
+		// Mask off all Template calls
+		$text = preg_replace( '/\{\{.*?\}\}/', '', $text );
 		preg_match_all( "/\[\[(User|$nsInLang):(.*?)(\|(.*?))?\]\]/", $text, $matches, PREG_SET_ORDER );
 		foreach ( $matches as $match ) {
 			$username = $match[2];
