@@ -30,16 +30,14 @@ class MentionParser {
 	public function parse( string $text ): array {
 		$mentions = [];
 		$matches = [];
-		$nsInLang = $this->language->getNsText( NS_USER );
-		// Mask off all Template calls
-		$text = preg_replace( '/\{\{.*?\}\}/', '', $text );
-		preg_match_all( "/\[\[(User|$nsInLang):(.*?)(\|(.*?))?\]\]/", $text, $matches, PREG_SET_ORDER );
+		$this->mask( $text );
+		preg_match_all( $this->getMentionRegex(), $text, $matches, PREG_SET_ORDER );
 		foreach ( $matches as $match ) {
-			$username = $match[2];
-			$user = $this->userFactory->newFromName( $username );
-			if ( !$user || !$user->isRegistered() ) {
+			$user = $this->getUserFromMatch( $match );
+			if ( !$user ) {
 				continue;
 			}
+
 			$mentions[] = [
 				'text' => $match[0],
 				'user' => $user,
@@ -47,6 +45,27 @@ class MentionParser {
 			];
 		}
 		return $mentions;
+	}
+
+	/**
+	 * @return string
+	 */
+	private function getMentionRegex(): string {
+		$nsInLang = mb_strtolower( $this->language->getNsText( NS_USER ) );
+		return "/\[\[(user|$nsInLang):(.*?)(\|(.*?))?\]\]/i";
+	}
+
+	/**
+	 * @param array $match
+	 * @return User|null
+	 */
+	private function getUserFromMatch( array $match ): ?User {
+		$username = $match[2];
+		$user = $this->userFactory->newFromName( $username );
+		if ( !$user || !$user->isRegistered() ) {
+			return null;
+		}
+		return $user;
 	}
 
 	/**
@@ -124,4 +143,34 @@ class MentionParser {
 			}, $removedUsers )
 		];
 	}
+
+	/**
+	 * @param string &$text
+	 * @return array
+	 */
+	private function mask( string &$text ): array {
+		$replacements = [];
+		// Mask <pre>, `<code>` and <nowiki> tags
+		$text = preg_replace_callback(
+			'/<pre>(.*?)<\/pre>|<code>(.*?)<\/code>|<nowiki>(.*?)<\/nowiki>/s',
+			static function ( $match ) use ( &$replacements ) {
+				$replacements[] = $match[0];
+				return "\x01" . ( count( $replacements ) - 1 ) . "\x01";
+			},
+			$text
+		);
+		return $replacements;
+	}
+
+	/**
+	 * @param string $text
+	 * @param array $replacements
+	 * @return string
+	 */
+	private function unmask( string $text, array $replacements ): string {
+		return preg_replace_callback( '/\x01(\d+)\x01/', static function ( $match ) use ( $replacements ) {
+			return $replacements[$match[1]];
+		}, $text );
+	}
+
 }

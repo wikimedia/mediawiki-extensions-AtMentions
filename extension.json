@@ -75,6 +75,7 @@
 	},
 	"Hooks": {
 		"ParserBeforeInternalParse": "processMentions",
+		"HtmlPageLinkRendererEnd": "processMentions",
 		"PageSaveComplete": "processMentions",
 		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
 		"ParserFirstCallInit": "processTags",
@@ -89,14 +90,14 @@
 			"class": "AtMentions\\Hook\\ProcessMentions",
 			"services": [
 				"AtMentionsParser", "AtMentionsStore", "RevisionStore",
-				"MWStake.Notifier", "TitleFactory", "MWStakeNotificationsNotifier"
+				"MWStake.Notifier", "TitleFactory", "MWStakeNotificationsNotifier", "UserFactory"
 			]
 		},
 		"processMentionsInEntities": {
 			"class": "AtMentions\\Hook\\ProcessMentionsInEntities",
 			"services": [
 				"AtMentionsParser", "AtMentionsStore", "RevisionStore",
-				"MWStake.Notifier", "TitleFactory", "NamespaceInfo", "MWStakeNotificationsNotifier"
+				"MWStake.Notifier", "TitleFactory", "NamespaceInfo", "MWStakeNotificationsNotifier", "UserFactory"
 			]
 		},
 		"runDatabaseUpdates": {
