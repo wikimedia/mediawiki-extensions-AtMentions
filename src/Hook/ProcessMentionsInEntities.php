@@ -13,6 +13,7 @@ use BlueSpice\Social\Topics\Entity\Topic;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWException;
 use MWStake\MediaWiki\Component\Events\Notifier;
@@ -45,12 +46,16 @@ class ProcessMentionsInEntities extends ProcessMentions {
 	 * @param TitleFactory $titleFactory
 	 * @param NamespaceInfo $namespaceInfo
 	 * @param INotifier $echoNotifier
+	 * @param UserFactory $userFactory
 	 */
 	public function __construct(
 		MentionParser $parser, MentionStore $mentionStore, RevisionStore $revisionStore,
-		Notifier $notifier, TitleFactory $titleFactory, NamespaceInfo $namespaceInfo, INotifier $echoNotifier
+		Notifier $notifier, TitleFactory $titleFactory,
+		NamespaceInfo $namespaceInfo, INotifier $echoNotifier, UserFactory $userFactory
 	) {
-		parent::__construct( $parser, $mentionStore, $revisionStore, $notifier, $titleFactory, $echoNotifier );
+		parent::__construct(
+			$parser, $mentionStore, $revisionStore, $notifier, $titleFactory, $echoNotifier, $userFactory
+		);
 		$this->namespaceInfo = $namespaceInfo;
 	}
 

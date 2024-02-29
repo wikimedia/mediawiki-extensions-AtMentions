@@ -8,7 +8,20 @@ sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
 Lorem ipsum dolor sit amet.
 
-[[User:B|UserB]]
+{{Test|{{PAGENAME}}|[[User:Z]]}}
+
+<nowiki>
+foo [[User:Y]] bar
+</nowiki>
+
+<code> asdf [[User:Y]] asdf </code>
+<pre>
+foo [[User:Y]] bar
+<span>[[User:Y]]</span>
+</pre>
+
+
+[[user:B|UserB]]
 
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
 vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent

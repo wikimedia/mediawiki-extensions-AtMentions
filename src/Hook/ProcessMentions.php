@@ -7,9 +7,11 @@ use AtMentions\Mention;
 use AtMentions\MentionParser;
 use AtMentions\MentionStore;
 use AtMentions\Notifications\MentionNotification;
+use HtmlArmor;
 use ManualLogEntry;
 use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\Hook\ParserBeforeInternalParseHook;
+use MediaWiki\Linker\Hook\HtmlPageLinkRendererEndHook;
 use MediaWiki\Linker\LinkTarget;
 use MediaWiki\Page\Hook\ArticleUndeleteHook;
 use MediaWiki\Page\Hook\PageDeleteCompleteHook;
@@ -19,19 +21,20 @@ use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Storage\Hook\PageSaveCompleteHook;
+use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
 use MWStake\MediaWiki\Component\Notifications\INotifier as EchoNotifier;
 use Title;
 use TitleFactory;
-use User;
 
 class ProcessMentions implements
 	ParserBeforeInternalParseHook,
 	PageSaveCompleteHook,
 	PageMoveCompleteHook,
 	PageDeleteCompleteHook,
-	ArticleUndeleteHook
+	ArticleUndeleteHook,
+	HtmlPageLinkRendererEndHook
 {
 	/** @var MentionParser */
 	protected $parser;
@@ -51,6 +54,12 @@ class ProcessMentions implements
 	/** @var EchoNotifier|null */
 	protected $echoNotifier;
 
+	/** @var UserFactory */
+	protected $userFactory;
+
+	/** @var bool */
+	protected $replaceUserLinks = false;
+
 	/**
 	 * @param MentionParser $parser
 	 * @param MentionStore $mentionStore
@@ -58,61 +67,67 @@ class ProcessMentions implements
 	 * @param Notifier $notifier
 	 * @param TitleFactory $titleFactory
 	 * @param EchoNotifier $echoNotifier
+	 * @param UserFactory $userFactory
 	 */
 	public function __construct(
 		MentionParser $parser, MentionStore $mentionStore, RevisionStore $revisionStore,
-		Notifier $notifier, TitleFactory $titleFactory, EchoNotifier $echoNotifier
+		Notifier $notifier, TitleFactory $titleFactory, EchoNotifier $echoNotifier, UserFactory $userFactory
 	) {
 		$this->parser = $parser;
 		$this->store = $mentionStore;
 		$this->revisionStore = $revisionStore;
 		$this->notifier = $notifier;
 		$this->titleFactory = $titleFactory;
+		$this->userFactory = $userFactory;
 		$this->echoNotifier = $echoNotifier;
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function onParserBeforeInternalParse( $mwParser, &$text, $stripState ) {
-		$title = $mwParser->getTitle();
-		if ( !$title || !$title->exists() || !$title->isContentPage() ) {
-			return;
+	public function onHtmlPageLinkRendererEnd( $linkRenderer, $target, $isKnown, &$text, &$attribs, &$ret ) {
+		if ( !$this->replaceUserLinks ) {
+			return true;
 		}
-		if ( $title->getNamespace() === NS_MEDIAWIKI ) {
-			return;
+		if ( $target->getNamespace() !== NS_USER ) {
+			return true;
 		}
-
-		$text = $text ?? '';
-		$mentions = $this->parser->parse( $text );
-		if ( !$mentions ) {
-			return;
-		}
-		$replaced = [];
-		foreach ( $mentions as $mention ) {
-			if ( in_array( $mention['text'], $replaced ) ) {
-				// Only replace every unique text once
-				continue;
+		$targetTitle = $this->titleFactory->newFromLinkTarget( $target );
+		$origLabel = $text instanceof HtmlArmor ? $text->getHtml( $text ) : $text;
+		if ( $origLabel === $targetTitle->getPrefixedText() || $origLabel === $targetTitle->getPrefixedDBkey() ) {
+			$user = $this->userFactory->newFromName( $targetTitle->getText() );
+			if ( $user ) {
+				$text = new HtmlArmor( $user->getRealName() ?: $user->getName() );
 			}
-			$user = $mention['user'];
-			$text = str_replace( $mention['text'], $this->getMentionHtml( $user, $mention['label'] ), $text );
-			$replaced[] = $mention['text'];
 		}
+		$attribs['style'] = 'background-color: #e5e4ff; border: 1px solid #acaeff;' .
+			'padding: 0 2px; border-radius: 2px;';
+		$attribs['class'] = 'at-mention';
+		return true;
 	}
 
 	/**
-	 * @param User $user
-	 * @param string $label
-	 *
-	 * @return string
+	 * @inheritDoc
 	 */
-	private function getMentionHtml( User $user, string $label ) {
-		return \Html::rawElement( 'span', [
-			'href' => $user->getUserPage()->getLinkURL(),
-			'class' => 'at-mention',
-			'style' => 'background-color: #e5e4ff; color: white; border: 1px solid #acaeff;' .
-				'padding: 0 2px; border-radius: 2px;'
-		], "[[User:{$user->getName()}|$label]]" );
+	public function onParserBeforeInternalParse( $mwParser, &$text, $stripState ) {
+		$this->replaceUserLinks = false;
+		if ( !$mwParser->getRevisionRecordObject() ) {
+			// Just focus on parsing the actual revision
+			return;
+		}
+		$title = $this->titleFactory->castFromPageIdentity( $mwParser->getRevisionRecordObject()->getPage() );
+		if (
+			!$title ||
+			$title->getNamespace() === NS_MEDIAWIKI ||
+			!$title->exists() ||
+			!$title->isContentPage() ||
+			$title->getContentModel() !== CONTENT_MODEL_WIKITEXT
+		) {
+			return;
+		}
+
+		// Set a flag to wrap the user link in the "mention html"
+		$this->replaceUserLinks = true;
 	}
 
 	/**
@@ -166,6 +181,7 @@ class ProcessMentions implements
 			} else {
 				$this->store->addMention( $mentionedUser, $revisionRecord, $user );
 			}
+
 			$this->emitEvent( $mentionedUser, $revisionRecord, $user );
 		}
 	}
