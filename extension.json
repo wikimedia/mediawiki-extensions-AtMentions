@@ -25,6 +25,9 @@
 		"Notifications": {
 			"Events": {
 				"at-mentions-mention": {
+					"spec": {
+						"class": "AtMentions\\Event\\UserMention"
+					},
 					"buckets": [ "personal" ]
 				},
 				"at-mentions-mention-in-entity": {
@@ -90,14 +93,14 @@
 			"class": "AtMentions\\Hook\\ProcessMentions",
 			"services": [
 				"AtMentionsParser", "AtMentionsStore", "RevisionStore",
-				"MWStake.Notifier", "TitleFactory", "MWStakeNotificationsNotifier", "UserFactory"
+				"MWStake.Notifier", "TitleFactory", "UserFactory"
 			]
 		},
 		"processMentionsInEntities": {
 			"class": "AtMentions\\Hook\\ProcessMentionsInEntities",
 			"services": [
 				"AtMentionsParser", "AtMentionsStore", "RevisionStore",
-				"MWStake.Notifier", "TitleFactory", "NamespaceInfo", "MWStakeNotificationsNotifier", "UserFactory"
+				"MWStake.Notifier", "TitleFactory", "NamespaceInfo", "UserFactory"
 			]
 		},
 		"runDatabaseUpdates": {
@@ -110,9 +113,6 @@
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
-	],
-	"ExtensionFunctions": [
-		"AtMentions\\Notifications\\Register::registerNotifications"
 	],
 	"manifest_version": 2,
 	"load_composer_autoloader": true
