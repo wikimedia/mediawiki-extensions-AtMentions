@@ -5,7 +5,6 @@ namespace AtMentions\Hook;
 use AtMentions\Event\UserMentionInEntity;
 use AtMentions\MentionParser;
 use AtMentions\MentionStore;
-use AtMentions\Notifications\MentionInEntityNotification;
 use BlueSpice\Entity;
 use BlueSpice\Social\Comments\Entity\Comment;
 use BlueSpice\Social\Entity\Text;
@@ -17,7 +16,6 @@ use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWException;
 use MWStake\MediaWiki\Component\Events\Notifier;
-use MWStake\MediaWiki\Component\Notifications\INotifier;
 use NamespaceInfo;
 use Status;
 use Title;
@@ -45,16 +43,15 @@ class ProcessMentionsInEntities extends ProcessMentions {
 	 * @param Notifier $notifier
 	 * @param TitleFactory $titleFactory
 	 * @param NamespaceInfo $namespaceInfo
-	 * @param INotifier $echoNotifier
 	 * @param UserFactory $userFactory
 	 */
 	public function __construct(
 		MentionParser $parser, MentionStore $mentionStore, RevisionStore $revisionStore,
 		Notifier $notifier, TitleFactory $titleFactory,
-		NamespaceInfo $namespaceInfo, INotifier $echoNotifier, UserFactory $userFactory
+		NamespaceInfo $namespaceInfo, UserFactory $userFactory
 	) {
 		parent::__construct(
-			$parser, $mentionStore, $revisionStore, $notifier, $titleFactory, $echoNotifier, $userFactory
+			$parser, $mentionStore, $revisionStore, $notifier, $titleFactory, $userFactory
 		);
 		$this->namespaceInfo = $namespaceInfo;
 	}
@@ -186,19 +183,11 @@ class ProcessMentionsInEntities extends ProcessMentions {
 		}
 
 		$event = new UserMentionInEntity(
-			$mentionedUser, $actor, $entity,
+			$mentionedUser, $actor,
 			$this->titleFactory->makeTitle( NS_SOCIALENTITY, $entity->get( Entity::ATTR_ID ) ),
-			$related
+			$entity, $related
 		);
 
 		$this->notifier->emit( $event );
-
-		$this->echoNotifier->notify(
-			new MentionInEntityNotification(
-				$actor,
-				$mentionedUser,
-				$this->titleFactory->makeTitle( NS_SOCIALENTITY, $entity->get( Entity::ATTR_ID ) )
-			)
-		);
 	}
 }

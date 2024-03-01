@@ -5,6 +5,7 @@ namespace AtMentions\Event;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use Message;
+use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
 use Title;
 
@@ -45,12 +46,17 @@ class UserMention extends TitleEvent {
 	}
 
 	/**
-	 * @return Message
+	 * @return string
 	 */
-	public function getMessage(): Message {
-		return Message::newFromKey( 'at-mentions-mention-notification-message' )->params(
-			$this->getTitleDisplayText()
-		);
+	protected function getMessageKey(): string {
+		return 'at-mentions-mention-notification-message';
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getLinks( IChannel $forChannel ): array {
+		return [];
 	}
 
 	/**
@@ -59,6 +65,8 @@ class UserMention extends TitleEvent {
 	public static function getArgsForTesting(
 		UserIdentity $agent, MediaWikiServices $services, array $extra = []
 	): array {
-		return [];
+		$targetUser = $extra['targetUser'] ?? $services->getUserFactory()->newFromName( 'WikiSysop' );
+		$title = $extra['title'] ?? $services->getTitleFactory()->newMainPage();
+		return [ $targetUser, $agent, $title ];
 	}
 }
