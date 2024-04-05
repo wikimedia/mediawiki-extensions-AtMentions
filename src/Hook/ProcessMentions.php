@@ -25,6 +25,7 @@ use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
 use MWStake\MediaWiki\Component\Notifications\INotifier as EchoNotifier;
+use RequestContext;
 use Title;
 use TitleFactory;
 
@@ -92,7 +93,16 @@ class ProcessMentions implements
 		if ( $target->getNamespace() !== NS_USER ) {
 			return true;
 		}
+		$pageTitle = RequestContext::getMain()->getTitle();
+		$existing = $this->store->forPage( $pageTitle )->query();
+		if ( !$existing ) {
+			return true;
+		}
 		$targetTitle = $this->titleFactory->newFromLinkTarget( $target );
+		$user = $this->userFactory->newFromName( $targetTitle->getText() );
+		if ( !$this->isMentioned( $user, $existing ) ) {
+			return true;
+		}
 		$origLabel = $text instanceof HtmlArmor ? $text->getHtml( $text ) : $text;
 		if ( $origLabel === $targetTitle->getPrefixedText() || $origLabel === $targetTitle->getPrefixedDBkey() ) {
 			$user = $this->userFactory->newFromName( $targetTitle->getText() );
