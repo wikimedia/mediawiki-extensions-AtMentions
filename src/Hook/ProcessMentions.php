@@ -257,7 +257,8 @@ class ProcessMentions implements
 	 * @inheritDoc
 	 */
 	public function onPageMoveComplete( $old, $new, $user, $pageid, $redirid, $reason, $revision ) {
-		$latestRev = $this->revisionStore->getRevisionByTitle( $new );
+		$title = Title::castFromLinkTarget( $new );
+		$latestRev = $this->revisionStore->getRevisionByTitle( $title );
 		$this->store->moveMentions( $latestRev );
 	}
 
