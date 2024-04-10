@@ -13,9 +13,12 @@ class RunDatabaseUpdates implements LoadExtensionSchemaUpdatesHook {
 	 * @return bool|void
 	 */
 	public function onLoadExtensionSchemaUpdates( $updater ) {
+		$dbType = $updater->getDB()->getType();
+		$dir = dirname( __DIR__, 2 );
+
 		$updater->addExtensionTable(
 			'user_mentions',
-			__DIR__ . '/../../db/user_mentions.sql'
+			"$dir/db/$dbType/user_mentions.sql"
 		);
 	}
 }
