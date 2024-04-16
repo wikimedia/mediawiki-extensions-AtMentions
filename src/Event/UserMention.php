@@ -5,6 +5,7 @@ namespace AtMentions\Event;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use Message;
+use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
 use Title;
 
@@ -45,9 +46,9 @@ class UserMention extends TitleEvent {
 	}
 
 	/**
-	 * @return Message
+	 * @inheritDoc
 	 */
-	public function getMessage(): Message {
+	public function getMessage( IChannel $forChannel ): Message {
 		return Message::newFromKey( 'at-mentions-mention-notification-message' )->params(
 			$this->getTitleDisplayText()
 		);
