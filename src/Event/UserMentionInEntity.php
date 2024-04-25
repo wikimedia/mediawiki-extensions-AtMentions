@@ -6,6 +6,7 @@ use BlueSpice\Entity;
 use BlueSpice\Social\Entity\Text;
 use MediaWiki\User\UserIdentity;
 use Message;
+use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\EventLink;
 use Title;
 
@@ -54,9 +55,9 @@ class UserMentionInEntity extends UserMention {
 	}
 
 	/**
-	 * @return Message
+	 * @inheritDoc
 	 */
-	public function getMessage(): Message {
+	public function getMessage( IChannel $forChannel ): Message {
 		return Message::newFromKey( 'at-mentions-mention-in-entity-notification-message' )->params(
 			$this->getTitleDisplayText(),
 			$this->getSnippet()
@@ -64,12 +65,12 @@ class UserMentionInEntity extends UserMention {
 	}
 
 	/**
-	 * @return EventLink[]
+	 * @inheritDoc
 	 */
-	public function getLinks(): array {
+	public function getLinks( IChannel $forChannel ): array {
 		// Return the link to the page where the comment was made
 		// and to the comment itself (entity) < maybe unnecessary
-		return parent::getLinks() + [
+		return parent::getLinks( $forChannel ) + [
 			new EventLink(
 				$this->title->getFullURL(),
 				Message::newFromKey( 'at-mentions-mention-in-entity-notification-post-link' )
