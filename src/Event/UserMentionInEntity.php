@@ -4,9 +4,11 @@ namespace AtMentions\Event;
 
 use BlueSpice\Entity;
 use BlueSpice\Social\Entity\Text;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use Message;
-use MWStake\MediaWiki\Component\Events\EventLink;
+use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
+use MWStake\MediaWiki\Component\Events\Delivery\IExternalChannel;
 use Title;
 
 class UserMentionInEntity extends UserMention {
@@ -19,13 +21,13 @@ class UserMentionInEntity extends UserMention {
 	/**
 	 * @param UserIdentity $mentionedUser
 	 * @param UserIdentity $agent
-	 * @param Entity $entity
 	 * @param Title $entityTitle
+	 * @param Entity $entity
 	 * @param Title|null $relatedTitle
 	 */
 	public function __construct(
-		UserIdentity $mentionedUser, UserIdentity $agent, Entity $entity,
-		Title $entityTitle, ?Title $relatedTitle = null
+		UserIdentity $mentionedUser, UserIdentity $agent, Title $entityTitle,
+		Entity $entity, ?Title $relatedTitle = null
 	) {
 		parent::__construct( $mentionedUser, $agent, $entityTitle );
 		$this->entity = $entity;
@@ -54,27 +56,21 @@ class UserMentionInEntity extends UserMention {
 	}
 
 	/**
-	 * @return Message
+	 * @inheritDoc
 	 */
-	public function getMessage(): Message {
+	public function getMessage( IChannel $forChannel ): Message {
 		return Message::newFromKey( 'at-mentions-mention-in-entity-notification-message' )->params(
-			$this->getTitleDisplayText(),
+			$this->getAgent()->getName(),
+			$this->getTitleAnchor( $this->getTitle(), $forChannel ),
 			$this->getSnippet()
 		);
 	}
 
 	/**
-	 * @return EventLink[]
+	 * @inheritDoc
 	 */
-	public function getLinks(): array {
-		// Return the link to the page where the comment was made
-		// and to the comment itself (entity) < maybe unnecessary
-		return parent::getLinks() + [
-			new EventLink(
-				$this->title->getFullURL(),
-				Message::newFromKey( 'at-mentions-mention-in-entity-notification-post-link' )
-			)
-		];
+	public function getLinks( IChannel $forChannel ): array {
+		return [];
 	}
 
 	/**
@@ -95,5 +91,18 @@ class UserMentionInEntity extends UserMention {
 			$suffix = '';
 		}
 		return substr( $text, 0, $len ) . $suffix;
+	}
+
+	/**
+	 * @param UserIdentity $agent
+	 * @param MediaWikiServices $services
+	 * @param array $extra
+	 * @return array
+	 */
+	public static function getArgsForTesting(
+		UserIdentity $agent, MediaWikiServices $services, array $extra = []
+	): array {
+		// Not testable
+		return [];
 	}
 }
