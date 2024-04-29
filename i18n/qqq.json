@@ -15,7 +15,7 @@
 	"at-mentions-mentionslist-header-mine": "Title of list of mentions of current user",
 	"at-mentions-mentionslist-header-all": "Title of list of mentions of specific user",
 	"at-mentions-mentionslist-header": "Title of list of mentions of user within date range",
-	"at-mentions-mention-notification-message": "Title of notification message if user has been mentioned",
+	"at-mentions-mention-notification-message": "Title of notification message if user has been mentioned.\n$1 agent\n$2 page anchor",
 	"at-mentions-mention-notification-key": "Key for notification message if user has been mentioned",
 	"at-mentions-mention-in-entity-notification-key": "Key for notification message if user has been mentioned in a comment or a post",
 	"at-mentions-mention-in-entity-notification-message": "Title of notification message if user has been mentioned in a comment or a post",

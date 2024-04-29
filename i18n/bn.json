@@ -2,21 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Borhan",
-			"আফতাবুজ্জামান"
+			"\u0986\u09ab\u09a4\u09be\u09ac\u09c1\u099c\u09cd\u099c\u09be\u09ae\u09be\u09a8"
 		]
 	},
-	"at-mentions-inspector-title": "একজন ব্যবহারকারীকে উল্লেখ করুন",
-	"at-mentions-inspector-title-add": "একটি উল্লেখ যোগ করুন",
-	"at-mentions-inspector-title-edit": "ব্যবহারকারী উল্লেখ সম্পাদনা করুন",
-	"at-mentions-ci-title": "ব্যবহারকারী উল্লেখন",
-	"at-mentions-mentionslist-header-mine-all": "এই পাতায় আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-mention-notification-message": "$1 পাতায় আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-mention-notification-key": "আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-mention-in-entity-notification-key": "আপনাকে একটি মন্তব্য বা পোস্টে উল্লেখ করা হয়েছে",
-	"at-mentions-mention-in-entity-notification-post-link": "সরাসরি পোস্টে যান",
-	"at-mentions-echo-mention-notification-summary": "$1 পাতায় আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-echo-mention-notification-email-body": "$1 পাতায় আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-echo-mention-entity-notification-summary": "$1 - এর একটি মন্তব্য বা পোস্টে আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-echo-mention-entity-notification-subject": "$1 পাতার একটি মন্তব্য বা পোস্টে আপনাকে {{GENDER:$2|$3 উল্লেখ}} করা হয়েছে",
-	"at-mentions-echo-mention-entity-notification-email-body": "$1 পাতার একটি পোস্টের মন্তব্যে আপনাকে উল্লেখ করা হয়েছে"
+	"at-mentions-inspector-title": "\u098f\u0995\u099c\u09a8 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09c1\u09a8",
+	"at-mentions-inspector-title-add": "\u098f\u0995\u099f\u09bf \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u09af\u09cb\u0997 \u0995\u09b0\u09c1\u09a8",
+	"at-mentions-inspector-title-edit": "\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u0995\u09b0\u09c1\u09a8",
+	"at-mentions-ci-title": "\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0 \u0989\u09b2\u09cd\u09b2\u09c7\u0996\u09a8",
+	"at-mentions-mentionslist-header-mine-all": "\u098f\u0987 \u09aa\u09be\u09a4\u09be\u09af\u09bc \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-mention-notification-message": "$1 \u09aa\u09be\u09a4\u09be\u09af\u09bc \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-mention-notification-key": "\u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-mention-in-entity-notification-key": "\u0986\u09aa\u09a8\u09be\u0995\u09c7 \u098f\u0995\u099f\u09bf \u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09ac\u09be \u09aa\u09cb\u09b8\u09cd\u099f\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-mention-in-entity-notification-post-link": "\u09b8\u09b0\u09be\u09b8\u09b0\u09bf \u09aa\u09cb\u09b8\u09cd\u099f\u09c7 \u09af\u09be\u09a8",
+	"at-mentions-echo-mention-notification-summary": "$1 \u09aa\u09be\u09a4\u09be\u09af\u09bc \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-echo-mention-notification-email-body": "$1 \u09aa\u09be\u09a4\u09be\u09af\u09bc \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-echo-mention-entity-notification-summary": "$1 - \u098f\u09b0 \u098f\u0995\u099f\u09bf \u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09ac\u09be \u09aa\u09cb\u09b8\u09cd\u099f\u09c7 \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-echo-mention-entity-notification-subject": "$1 \u09aa\u09be\u09a4\u09be\u09b0 \u098f\u0995\u099f\u09bf \u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09ac\u09be \u09aa\u09cb\u09b8\u09cd\u099f\u09c7 \u0986\u09aa\u09a8\u09be\u0995\u09c7 {{GENDER:$2|$3 \u0989\u09b2\u09cd\u09b2\u09c7\u0996}} \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7",
+	"at-mentions-echo-mention-entity-notification-email-body": "$1 \u09aa\u09be\u09a4\u09be\u09b0 \u098f\u0995\u099f\u09bf \u09aa\u09cb\u09b8\u09cd\u099f\u09c7\u09b0 \u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af\u09c7 \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7"
 }
