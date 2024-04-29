@@ -22,13 +22,5 @@
 	"at-mentions-mention-notification-key": "あなたはメンションされました",
 	"at-mentions-mention-in-entity-notification-key": "あなたはコメントまたは投稿の中でメンションされました",
 	"at-mentions-mention-in-entity-notification-message": "ページ「$1」のコメントまたは投稿「 $2 」であなたをメンションしました",
-	"at-mentions-mention-in-entity-notification-post-link": "投稿を見る",
-	"at-mentions-toolbar-tool-title": "メンションを追加",
-	"at-mentions-echo-mention-notification-summary": "あなたはページ「$1」でメンションされています",
-	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2|$3 があなたに言及しました}}",
-	"at-mentions-echo-mention-notification-subject": "{{GENDER:$2|$3 が}}ページ $1 であなたに言及しました",
-	"at-mentions-echo-mention-notification-email-body": "ページ「$1」であなたがメンションされました",
-	"at-mentions-echo-mention-entity-notification-summary": "あなたは$1でのコメント又は投稿で言及されました",
-	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2|$3 が}}ページ $1 のコメントまたは投稿であなたに言及しました",
-	"at-mentions-echo-mention-entity-notification-email-body": "あなたはページ $1 の投稿のコメントで言及されました"
+	"at-mentions-toolbar-tool-title": "メンションを追加"
 }
