@@ -4,15 +4,15 @@
 			"Kakan spelar"
 		]
 	},
-	"at-mentions-inspector-title": "N\u00e4mn en anv\u00e4ndare",
-	"at-mentions-mentionslist-header-mine-all": "Du har n\u00e4mnts p\u00e5 den h\u00e4r sidan",
-	"at-mentions-mention-notification-message": "n\u00e4mnde dig p\u00e5 sidan $1",
-	"at-mentions-mention-notification-key": "Du har blivit n\u00e4mnd",
-	"at-mentions-mention-in-entity-notification-key": "Du har n\u00e4mnts i en kommentar eller ett inl\u00e4gg",
-	"at-mentions-mention-in-entity-notification-message": "n\u00e4mnde dig i en kommentar eller ett inl\u00e4gg \"$2\" p\u00e5 sidan $1",
-	"at-mentions-mention-in-entity-notification-post-link": "G\u00e5 direkt till inl\u00e4gget",
-	"at-mentions-echo-mention-notification-summary": "Du har n\u00e4mnts p\u00e5 sidan $1",
-	"at-mentions-echo-mention-notification-email-body": "Du har n\u00e4mnts p\u00e5 sidan $1",
-	"at-mentions-echo-mention-entity-notification-summary": "Du har n\u00e4mnts i en kommentar eller ett inl\u00e4gg p\u00e5 $1",
-	"at-mentions-echo-mention-entity-notification-email-body": "Du har n\u00e4mnts i en kommentar till ett inl\u00e4gg p\u00e5 sidan $1"
+	"at-mentions-inspector-title": "Nämn en användare",
+	"at-mentions-mentionslist-header-mine-all": "Du har nämnts på den här sidan",
+	"at-mentions-mention-notification-message": "nämnde dig på sidan $1",
+	"at-mentions-mention-notification-key": "Du har blivit nämnd",
+	"at-mentions-mention-in-entity-notification-key": "Du har nämnts i en kommentar eller ett inlägg",
+	"at-mentions-mention-in-entity-notification-message": "nämnde dig i en kommentar eller ett inlägg \"$2\" på sidan $1",
+	"at-mentions-mention-in-entity-notification-post-link": "Gå direkt till inlägget",
+	"at-mentions-echo-mention-notification-summary": "Du har nämnts på sidan $1",
+	"at-mentions-echo-mention-notification-email-body": "Du har nämnts på sidan $1",
+	"at-mentions-echo-mention-entity-notification-summary": "Du har nämnts i en kommentar eller ett inlägg på $1",
+	"at-mentions-echo-mention-entity-notification-email-body": "Du har nämnts i en kommentar till ett inlägg på sidan $1"
 }
