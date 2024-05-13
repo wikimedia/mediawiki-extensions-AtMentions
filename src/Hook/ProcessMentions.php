@@ -87,6 +87,9 @@ class ProcessMentions implements
 			return true;
 		}
 		$pageTitle = RequestContext::getMain()->getTitle();
+		if ( !$pageTitle ) {
+			return true;
+		}
 		$existing = $this->store->forPage( $pageTitle )->query();
 		if ( !$existing ) {
 			return true;
