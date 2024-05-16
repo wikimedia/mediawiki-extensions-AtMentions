@@ -15,9 +15,9 @@
 	"at-mentions-mentionslist-header-mine": "Упродовж {{PLURAL:$1|минулого дня|минулих $1 днів}} вас згадували на цих сторінках:",
 	"at-mentions-mentionslist-header-all": "{{GENDER:$2|Користувач|Користувачка}} [[User:$2|$2]] згадується на цих сторінках:",
 	"at-mentions-mentionslist-header": "Упродовж {{PLURAL:$1|минулого дня|минулих $1 днів}} {{GENDER:$2|користувача|користувачку}} [[User:$2|$2]] згадували на цих сторінках:",
-	"at-mentions-mention-notification-message": "згадали вас на сторінці $1",
+	"at-mentions-mention-notification-message": "$1 {{GENDER:$1|згадав|згадала|згадали}} вас на сторінці $2",
 	"at-mentions-mention-notification-key": "Вас було згадано",
 	"at-mentions-mention-in-entity-notification-key": "Вас згадали в коментарі або дописі",
-	"at-mentions-mention-in-entity-notification-message": "згадали вас у коментарі або дописі «$2» на сторінці $1",
+	"at-mentions-mention-in-entity-notification-message": "$1 {{GENDER:$1|згадав|згадала|згадали}} вас у коментарі або дописі «$3» на сторінці $2",
 	"at-mentions-toolbar-tool-title": "Додати згадку"
 }
