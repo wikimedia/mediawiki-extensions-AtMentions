@@ -15,17 +15,9 @@
 	"at-mentions-mentionslist-header-mine": "Упродовж {{PLURAL:$1|минулого дня|минулих $1 днів}} вас згадували на цих сторінках:",
 	"at-mentions-mentionslist-header-all": "{{GENDER:$2|Користувач|Користувачка}} [[User:$2|$2]] згадується на цих сторінках:",
 	"at-mentions-mentionslist-header": "Упродовж {{PLURAL:$1|минулого дня|минулих $1 днів}} {{GENDER:$2|користувача|користувачку}} [[User:$2|$2]] згадували на цих сторінках:",
-	"at-mentions-mention-notification-message": "згадали вас на сторінці $1",
+	"at-mentions-mention-notification-message": "$1 {{GENDER:$1|згадав|згадала|згадали}} вас на сторінці $2",
 	"at-mentions-mention-notification-key": "Вас було згадано",
 	"at-mentions-mention-in-entity-notification-key": "Вас згадали в коментарі або дописі",
-	"at-mentions-mention-in-entity-notification-message": "згадали вас у коментарі або дописі «$2» на сторінці $1",
-	"at-mentions-mention-in-entity-notification-post-link": "Перейти безпосередньо до допису",
-	"at-mentions-toolbar-tool-title": "Додати згадку",
-	"at-mentions-echo-mention-notification-summary": "Вас згадали на сторінці $1",
-	"at-mentions-echo-mention-notification-web-body": "{{GENDER:$2|$3 згадав|$3 згадала|$3 згадали}} вас",
-	"at-mentions-echo-mention-notification-subject": "{{GENDER:$2|$3 згадав|$3 згадала|$3 згадали}} вас на сторінці $1",
-	"at-mentions-echo-mention-notification-email-body": "Вас згадали на сторінці $1",
-	"at-mentions-echo-mention-entity-notification-summary": "Вас згадали в коментарі або дописі на сторінці $1",
-	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2|$3 згадав|$3 згадала|$3 згадали}} вас у коментарі чи дописі на сторінці $1",
-	"at-mentions-echo-mention-entity-notification-email-body": "Вас згадали в коментарі допису на сторінці $1"
+	"at-mentions-mention-in-entity-notification-message": "$1 {{GENDER:$1|згадав|згадала|згадали}} вас у коментарі або дописі «$3» на сторінці $2",
+	"at-mentions-toolbar-tool-title": "Додати згадку"
 }

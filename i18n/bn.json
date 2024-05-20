@@ -10,13 +10,7 @@
 	"at-mentions-inspector-title-edit": "ব্যবহারকারী উল্লেখ সম্পাদনা করুন",
 	"at-mentions-ci-title": "ব্যবহারকারী উল্লেখন",
 	"at-mentions-mentionslist-header-mine-all": "এই পাতায় আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-mention-notification-message": "$1 পাতায় আপনাকে উল্লেখ করা হয়েছে",
+	"at-mentions-mention-notification-message": "$2 পাতায় আপনাকে {{GENDER:$1|উল্লেখ করা হয়েছে}}",
 	"at-mentions-mention-notification-key": "আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-mention-in-entity-notification-key": "আপনাকে একটি মন্তব্য বা পোস্টে উল্লেখ করা হয়েছে",
-	"at-mentions-mention-in-entity-notification-post-link": "সরাসরি পোস্টে যান",
-	"at-mentions-echo-mention-notification-summary": "$1 পাতায় আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-echo-mention-notification-email-body": "$1 পাতায় আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-echo-mention-entity-notification-summary": "$1 - এর একটি মন্তব্য বা পোস্টে আপনাকে উল্লেখ করা হয়েছে",
-	"at-mentions-echo-mention-entity-notification-subject": "$1 পাতার একটি মন্তব্য বা পোস্টে আপনাকে {{GENDER:$2|$3 উল্লেখ}} করা হয়েছে",
-	"at-mentions-echo-mention-entity-notification-email-body": "$1 পাতার একটি পোস্টের মন্তব্যে আপনাকে উল্লেখ করা হয়েছে"
+	"at-mentions-mention-in-entity-notification-key": "আপনাকে একটি মন্তব্য বা পোস্টে উল্লেখ করা হয়েছে"
 }
