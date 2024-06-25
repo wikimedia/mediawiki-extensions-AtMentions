@@ -15,9 +15,9 @@
 	"at-mentions-mentionslist-header-mine": "在過去 {{PLURAL:$1|1|$1}} 天裡，這些頁面上有提及您：",
 	"at-mentions-mentionslist-header-all": "使用者{{GENDER:$2|[[User:$2]]已在這些頁面上提及}}：",
 	"at-mentions-mentionslist-header": "在過去 {{PLURAL:$1|1|$1}} 天裡，{{GENDER:$2|[[User:$2]]已在這些頁面上提及}}：",
-	"at-mentions-mention-notification-message": "在頁面$1提及您",
+	"at-mentions-mention-notification-message": "在頁面$2{{GENDER:$1|提及}}您",
 	"at-mentions-mention-notification-key": "您已被提及",
 	"at-mentions-mention-in-entity-notification-key": "您有在評論或貼文中被提及",
-	"at-mentions-mention-in-entity-notification-message": "在頁面$1的評論或貼文「$2」中提及了您",
+	"at-mentions-mention-in-entity-notification-message": "在頁面$2的評論或貼文「$3」中{{GENDER:$1|提及了}}您",
 	"at-mentions-toolbar-tool-title": "新增提及"
 }
