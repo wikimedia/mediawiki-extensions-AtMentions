@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Justman10000",
 			"McDutchie",
 			"SehrGuterCode",
 			"TomatoCake",
@@ -18,9 +19,9 @@
 	"at-mentions-mentionslist-header-mine": "Innerhalb {{PLURAL:$1|des letzten Tages|der letzten $1 Tage}}, wurdest du auf diesen Seiten erwähnt:",
 	"at-mentions-mentionslist-header-all": "Benutzer {{GENDER:$2|[[User:$2]] wurde auf diesen Seiten erwähnt}}:",
 	"at-mentions-mentionslist-header": "Innerhalb {{PLURAL:$1|des letzten Tages|der letzten $1 Tage}}, wurde {{GENDER:$2|[[User:$2]] auf diesen Seiten erwähnt}}:",
-	"at-mentions-mention-notification-message": "erwähnte dich auf der Seite $1",
+	"at-mentions-mention-notification-message": "{{GENDER:$1|erwähnte}} dich auf Seite $2",
 	"at-mentions-mention-notification-key": "Du wurdest erwähnt",
 	"at-mentions-mention-in-entity-notification-key": "Du wurdest in einem Kommentar oder Beitrag erwähnt",
-	"at-mentions-mention-in-entity-notification-message": "erwähnte dich in einem Kommentar oder Beitrag „$2“ auf der Seite $1",
+	"at-mentions-mention-in-entity-notification-message": "{{GENDER:$1|erwähnte}} dich in einem Kommentar oder einem Beitrag \"$3\" auf Seite $2",
 	"at-mentions-toolbar-tool-title": "Erwähnung hinzufügen"
 }
