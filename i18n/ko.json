@@ -9,5 +9,6 @@
 	"at-mentions-inspector-title-add": "언급 추가",
 	"at-mentions-inspector-title-edit": "사용자 언급 편집",
 	"at-mentions-ci-title": "사용자 언급",
-	"at-mentions-toolbar-tool-title": "언급 추가"
+	"at-mentions-toolbar-tool-title": "언급 추가",
+	"at-mentions-mentionslist-header-mine-all": "이 문서에서 당신이 언급되었습니다"
 }
