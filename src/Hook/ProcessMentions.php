@@ -95,7 +95,13 @@ class ProcessMentions implements
 			return true;
 		}
 		$targetTitle = $this->titleFactory->newFromLinkTarget( $target );
+		if ( $targetTitle->isSubpage() ) {
+			return true;
+		}
 		$user = $this->userFactory->newFromName( $targetTitle->getText() );
+		if ( $user === null ) {
+			return true;
+		}
 		if ( !$this->isMentioned( $user, $existing ) ) {
 			return true;
 		}
