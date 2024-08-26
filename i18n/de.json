@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brettchenweber",
 			"Justman10000",
 			"McDutchie",
 			"SehrGuterCode",
@@ -18,7 +19,7 @@
 	"at-mentions-mentionslist-header-mine-all": "Du wurdest auf dieser Seite erwähnt",
 	"at-mentions-mentionslist-header-mine": "Innerhalb {{PLURAL:$1|des letzten Tages|der letzten $1 Tage}}, wurdest du auf diesen Seiten erwähnt:",
 	"at-mentions-mentionslist-header-all": "Benutzer {{GENDER:$2|[[User:$2|$2]] wurde auf diesen Seiten erwähnt}}:",
-	"at-mentions-mentionslist-header": "Innerhalb {{PLURAL:$1|des letzten Tages|der letzten $1 Tage}}, wurde {{GENDER:$2|[[User:$2|$2]] auf diesen Seiten erwähnt}}:",
+	"at-mentions-mentionslist-header": "Innerhalb {{PLURAL:$1|des letzten Tages|der letzten $1 Tage}} wurde {{GENDER:$2|[[User:$2|$2]] auf diesen Seiten erwähnt}}:",
 	"at-mentions-mention-notification-message": "{{GENDER:$1|erwähnte}} dich auf Seite $2",
 	"at-mentions-mention-notification-key": "Du wurdest erwähnt",
 	"at-mentions-mention-in-entity-notification-key": "Du wurdest in einem Kommentar oder Beitrag erwähnt",
