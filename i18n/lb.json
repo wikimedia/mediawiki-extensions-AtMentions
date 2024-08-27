@@ -4,5 +4,6 @@
 			"Volvox"
 		]
 	},
-	"at-mentions-inspector-title": "E Benotzer ernimmen"
+	"at-mentions-inspector-title": "E Benotzer ernimmen",
+	"at-mentions-mentionslist-header-all": "{{GENDER:$2|De Benotzer|D'Benotzerin}} [[User:$2|$2]] gouf op dëse Säiten ernimmt:"
 }
