@@ -22,7 +22,7 @@
 				"ext.mentions.ve"
 			]
 		},
-		"Notifications": {
+		"NotifyMe": {
 			"Events": {
 				"at-mentions-mention": {
 					"spec": {
