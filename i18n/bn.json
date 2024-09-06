@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Borhan",
+			"ZeetBaral",
 			"আফতাবুজ্জামান"
 		]
 	},
@@ -18,5 +19,6 @@
 	"at-mentions-echo-mention-notification-email-body": "$1 পাতায় আপনাকে উল্লেখ করা হয়েছে",
 	"at-mentions-echo-mention-entity-notification-summary": "$1 - এর একটি মন্তব্য বা পোস্টে আপনাকে উল্লেখ করা হয়েছে",
 	"at-mentions-echo-mention-entity-notification-subject": "$1 পাতার একটি মন্তব্য বা পোস্টে আপনাকে {{GENDER:$2|$3 উল্লেখ}} করা হয়েছে",
-	"at-mentions-echo-mention-entity-notification-email-body": "$1 পাতার একটি পোস্টের মন্তব্যে আপনাকে উল্লেখ করা হয়েছে"
+	"at-mentions-echo-mention-entity-notification-email-body": "$1 পাতার একটি পোস্টের মন্তব্যে আপনাকে উল্লেখ করা হয়েছে",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|[[User:$1|$1]] দ্বারা}}"
 }
