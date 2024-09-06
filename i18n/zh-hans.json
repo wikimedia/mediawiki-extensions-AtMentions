@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GuoPC",
 			"Lakejason0",
 			"U.T.",
 			"沈澄心"
@@ -11,12 +12,12 @@
 	"at-mentions-inspector-title-add": "添加提及",
 	"at-mentions-inspector-title-edit": "编辑用户提及",
 	"at-mentions-ci-title": "用户提及",
-	"at-mentions-tag-item-actor": "{{GENDER:$1|由[[User:$1]]}}",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|由[[User:$1|$1]]}}",
 	"at-mentions-tag-item-time": "于$1",
 	"at-mentions-mentionslist-header-mine-all": "此页面上提及了您",
 	"at-mentions-mentionslist-header-mine": "在过去的{{PLURAL:$1|$1天}}里，这些页面上提及了您：",
-	"at-mentions-mentionslist-header-all": "用户{{GENDER:$2|[[User:$2]]已在这些页面上提及}}：",
-	"at-mentions-mentionslist-header": "在过去的{{PLURAL:$1|$1天}}里，{{GENDER:$2|[[User:$2]]已在这些页面上提及}}：",
+	"at-mentions-mentionslist-header-all": "用户{{GENDER:$2|[[User:$2|$2]]已在这些页面上提及}}：",
+	"at-mentions-mentionslist-header": "在过去的{{PLURAL:$1|$1天}}里，{{GENDER:$2|[[User:$2|$2]]已在这些页面上提及}}：",
 	"at-mentions-mention-notification-message": "在页面“$2”{{GENDER:$1|提及了}}您",
 	"at-mentions-mention-notification-key": "您已被提及",
 	"at-mentions-mention-in-entity-notification-key": "您在评论或帖子中被提及",
