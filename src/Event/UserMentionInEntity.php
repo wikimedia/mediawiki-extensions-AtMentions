@@ -2,8 +2,6 @@
 
 namespace AtMentions\Event;
 
-use BlueSpice\Entity;
-use BlueSpice\Social\Entity\Text;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use Message;
@@ -11,8 +9,9 @@ use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use Title;
 
 class UserMentionInEntity extends UserMention {
-	/** @var Entity */
-	private $entity;
+
+	/** @var string */
+	private $text;
 
 	/** @var Title|null */
 	private $relatedTitle;
@@ -21,15 +20,15 @@ class UserMentionInEntity extends UserMention {
 	 * @param UserIdentity $mentionedUser
 	 * @param UserIdentity $agent
 	 * @param Title $entityTitle
-	 * @param Entity $entity
+	 * @param string $text
 	 * @param Title|null $relatedTitle
 	 */
 	public function __construct(
 		UserIdentity $mentionedUser, UserIdentity $agent, Title $entityTitle,
-		Entity $entity, ?Title $relatedTitle = null
+		string $text, ?Title $relatedTitle = null
 	) {
 		parent::__construct( $mentionedUser, $agent, $entityTitle );
-		$this->entity = $entity;
+		$this->text = $text;
 		$this->relatedTitle = $relatedTitle;
 	}
 
@@ -76,20 +75,16 @@ class UserMentionInEntity extends UserMention {
 	 * @return string
 	 */
 	private function getSnippet(): string {
-		if ( !$this->entity instanceof Text ) {
-			return '';
-		}
-		$text = $this->entity->get( Text::ATTR_TEXT );
-		if ( $text === null ) {
+		if ( !$this->text ) {
 			return '';
 		}
 		// TODO: Get snippet around the user link, just some random stuff for now
 		$suffix = '...';
-		$len = min( strlen( $text ), 100 );
-		if ( strlen( $text ) < 100 ) {
+		$len = min( strlen( $this->text ), 100 );
+		if ( strlen( $this->text ) < 100 ) {
 			$suffix = '';
 		}
-		return substr( $text, 0, $len ) . $suffix;
+		return substr( $this->text, 0, $len ) . $suffix;
 	}
 
 	/**
