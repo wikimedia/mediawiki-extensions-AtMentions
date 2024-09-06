@@ -6,6 +6,7 @@ use AtMentions\Event\UserMentionInEntity;
 use AtMentions\MentionParser;
 use AtMentions\MentionStore;
 use BlueSpice\Entity;
+use BlueSpice\Social\Blog\Entity\Blog;
 use BlueSpice\Social\Comments\Entity\Comment;
 use BlueSpice\Social\Entity\Text;
 use BlueSpice\Social\Topics\Entity\Topic;
@@ -177,15 +178,20 @@ class ProcessMentionsInEntities extends ProcessMentions {
 			return;
 		}
 
-		$related = $this->titleFactory->newFromText( $entity->get( Text::ATTR_RELATED_TITLE ) );
-		if ( $related && $related->isTalkPage() ) {
-			$related = $this->titleFactory->newFromLinkTarget( $this->namespaceInfo->getSubjectPage( $related ) );
+		$parent = $entity instanceof Comment ? $entity->getParent() : null;
+		if ( $parent && $parent instanceof Blog ) {
+			$related = \SpecialPage::getTitleFor( 'Blog' );
+		} else {
+			$related = $this->titleFactory->newFromText( $entity->get( Text::ATTR_RELATED_TITLE ) );
+			if ( $related && $related->isTalkPage() ) {
+				$related = $this->titleFactory->newFromLinkTarget( $this->namespaceInfo->getSubjectPage( $related ) );
+			}
 		}
 
 		$event = new UserMentionInEntity(
 			$mentionedUser, $actor,
 			$this->titleFactory->makeTitle( NS_SOCIALENTITY, $entity->get( Entity::ATTR_ID ) ),
-			$entity, $related
+			$entity instanceof Text ? $entity->get( Text::ATTR_TEXT ) : '', $related
 		);
 
 		$this->notifier->emit( $event );
