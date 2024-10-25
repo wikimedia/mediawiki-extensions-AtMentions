@@ -17,5 +17,6 @@ ext.atMentions.tools.MentionTool.static.autoAddToGroup = false;
 ve.ui.toolFactory.register( ext.atMentions.tools.MentionTool );
 
 ve.init.mw.Target.static.toolbarGroups.push( {
-	include: [ 'mention' ]
+	include: [ 'mention' ],
+	classes: [ 've-ui-toolbar-group-at-mention' ],
 } );
