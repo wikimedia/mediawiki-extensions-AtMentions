@@ -28,7 +28,8 @@ class ProcessMentionsInEntities extends ProcessMentions {
 	/** @var array */
 	private $supportedEntities = [
 		Comment::class => Comment::ATTR_TEXT,
-		Topic::class => Topic::ATTR_TEXT
+		Topic::class => Topic::ATTR_TEXT,
+		Blog::class => Blog::ATTR_TEXT,
 	];
 
 	/** @var array */
