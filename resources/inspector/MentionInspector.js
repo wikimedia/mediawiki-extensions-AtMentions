@@ -64,8 +64,10 @@ ext.atMentions.ui.UserMentionInspector.prototype.getAnnotationFromFragment = fun
  */
 // eslint-disable-next-line no-unused-vars
 ext.atMentions.ui.UserMentionInspector.prototype.onUserChoose = function ( user ) {
-	this.updateActions();
-	this.onFormSubmit();
+	const promise = this.updateActions();
+	promise.then( function () {
+		this.onFormSubmit();
+	}.bind( this ) );
 };
 
 ext.atMentions.ui.UserMentionInspector.prototype.makeAnnotation = function () {
@@ -75,16 +77,14 @@ ext.atMentions.ui.UserMentionInspector.prototype.makeAnnotation = function () {
 
 /**
  * Update the actions based on the annotation state
- *
- * @return {void}
  */
 ext.atMentions.ui.UserMentionInspector.prototype.updateActions = function () {
 	var isValid = false,
 		inspector = this,
-		annotation = this.makeAnnotation();
+		annotation = this.makeAnnotation(),
+		promise = this.userPicker.getValidity();
 
-	this.userPicker.getValidity()
-		.then( function () {
+	promise.then( function () {
 			isValid = true;
 		} )
 		.always( function () {
@@ -93,6 +93,7 @@ ext.atMentions.ui.UserMentionInspector.prototype.updateActions = function () {
 				action.setDisabled( !isValid );
 			} );
 		} );
+	return promise;
 };
 
 /**
