@@ -13,13 +13,13 @@ use BlueSpice\Social\Topics\Entity\Topic;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWException;
 use MWStake\MediaWiki\Component\Events\Notifier;
 use NamespaceInfo;
 use Status;
-use Title;
 use TitleFactory;
 use WikitextContent;
 
