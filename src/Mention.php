@@ -3,7 +3,7 @@
 namespace AtMentions;
 
 use MediaWiki\Revision\RevisionRecord;
-use Title;
+use MediaWiki\Title\Title;
 use User;
 
 class Mention implements \JsonSerializable {
