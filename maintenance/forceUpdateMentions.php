@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\User\User;
 use Wikimedia\Rdbms\IResultWrapper;
 
 require_once dirname( __DIR__, 3 ) . '/maintenance/Maintenance.php';

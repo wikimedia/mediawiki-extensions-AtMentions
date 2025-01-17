@@ -4,9 +4,9 @@ namespace AtMentions\Tests;
 
 use AtMentions\MentionParser;
 use Language;
+use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use PHPUnit\Framework\TestCase;
-use User;
 
 class ParserTest extends TestCase {
 
