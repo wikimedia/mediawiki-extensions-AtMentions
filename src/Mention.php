@@ -4,7 +4,7 @@ namespace AtMentions;
 
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;
-use User;
+use MediaWiki\User\User;
 
 class Mention implements \JsonSerializable {
 	/** @var User */
