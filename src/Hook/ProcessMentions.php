@@ -8,6 +8,7 @@ use AtMentions\MentionParser;
 use AtMentions\MentionStore;
 use HtmlArmor;
 use ManualLogEntry;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\Hook\ParserBeforeInternalParseHook;
 use MediaWiki\Linker\Hook\HtmlPageLinkRendererEndHook;
@@ -24,7 +25,6 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
-use RequestContext;
 use TitleFactory;
 
 class ProcessMentions implements
