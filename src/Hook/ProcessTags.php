@@ -8,8 +8,8 @@ use Html;
 use Language;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\Message\Message;
 use MediaWiki\User\UserFactory;
-use Message;
 use Parser as MWParser;
 
 class ProcessTags implements ParserFirstCallInitHook {
