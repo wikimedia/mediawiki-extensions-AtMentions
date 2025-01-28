@@ -13,6 +13,7 @@ use BlueSpice\Social\Topics\Entity\Topic;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserFactory;
@@ -181,7 +182,7 @@ class ProcessMentionsInEntities extends ProcessMentions {
 
 		$parent = $entity instanceof Comment ? $entity->getParent() : null;
 		if ( $parent && $parent instanceof Blog ) {
-			$related = \SpecialPage::getTitleFor( 'Blog' );
+			$related = SpecialPage::getTitleFor( 'Blog' );
 		} else {
 			$related = $this->titleFactory->newFromText( $entity->get( Text::ATTR_RELATED_TITLE ) );
 			if ( $related && $related->isTalkPage() ) {
