@@ -4,9 +4,9 @@ namespace AtMentions\Hook;
 
 use AtMentions\Mention;
 use AtMentions\MentionStore;
-use Html;
 use Language;
 use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Message\Message;
 use MediaWiki\User\UserFactory;
