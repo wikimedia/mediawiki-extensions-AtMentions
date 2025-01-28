@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Cigaryno"
 		]
 	},
 	"at-mentions-desc": "أضف إشارة لمستخدم",
 	"at-mentions-inspector-title": "أشر إلى مستخدم",
 	"at-mentions-ci-title": "إشارة لمستخدم",
-	"at-mentions-mentionslist-header-mine-all": "أشير إليك في هذه الصفحة"
+	"at-mentions-mentionslist-header-mine-all": "أشير إليك في هذه الصفحة",
+	"at-mentions-toolbar-tool-title": "أضف إشارة"
 }
