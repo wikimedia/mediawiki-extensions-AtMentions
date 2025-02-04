@@ -272,7 +272,10 @@ class ProcessMentions implements
 		bool $created,
 		array $restoredPageIds
 	): void {
-		$title = Title::newFromPageIdentity( $page );
+		$title = $this->titleFactory->castFromPageIdentity( $page );
+		if ( !$title ) {
+			return;
+		}
 		if ( $title->getContentModel() !== CONTENT_MODEL_WIKITEXT ) {
 			// For now only support wikitext
 			return;
