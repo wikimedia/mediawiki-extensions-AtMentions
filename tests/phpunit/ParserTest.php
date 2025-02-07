@@ -3,7 +3,7 @@
 namespace AtMentions\Tests;
 
 use AtMentions\MentionParser;
-use Language;
+use MediaWiki\Language\Language;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use PHPUnit\Framework\TestCase;
