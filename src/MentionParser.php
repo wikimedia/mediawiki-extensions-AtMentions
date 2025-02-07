@@ -2,7 +2,7 @@
 
 namespace AtMentions;
 
-use Language;
+use MediaWiki\Language\Language;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 
