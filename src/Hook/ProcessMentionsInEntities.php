@@ -10,6 +10,7 @@ use BlueSpice\Social\Blog\Entity\Blog;
 use BlueSpice\Social\Comments\Entity\Comment;
 use BlueSpice\Social\Entity\Text;
 use BlueSpice\Social\Topics\Entity\Topic;
+use MediaWiki\Content\WikitextContent;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
@@ -22,7 +23,6 @@ use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWException;
 use MWStake\MediaWiki\Component\Events\Notifier;
-use WikitextContent;
 
 class ProcessMentionsInEntities extends ProcessMentions {
 
