@@ -2,6 +2,7 @@
 
 use MediaWiki\Maintenance\Maintenance;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\IResultWrapper;
 
 require_once dirname( __DIR__, 3 ) . '/maintenance/Maintenance.php';
