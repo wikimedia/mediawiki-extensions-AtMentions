@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Content\WikitextContent;
+use MediaWiki\Maintenance\Maintenance;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
