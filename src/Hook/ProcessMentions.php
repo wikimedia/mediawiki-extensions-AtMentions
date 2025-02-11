@@ -13,8 +13,8 @@ use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\Hook\ParserBeforeInternalParseHook;
 use MediaWiki\Linker\Hook\HtmlPageLinkRendererEndHook;
 use MediaWiki\Linker\LinkTarget;
-use MediaWiki\Page\Hook\ArticleUndeleteHook;
 use MediaWiki\Page\Hook\PageDeleteCompleteHook;
+use MediaWiki\Page\Hook\PageUndeleteCompleteHook;
 use MediaWiki\Page\ProperPageIdentity;
 use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionRecord;
@@ -32,7 +32,7 @@ class ProcessMentions implements
 	PageSaveCompleteHook,
 	PageMoveCompleteHook,
 	PageDeleteCompleteHook,
-	ArticleUndeleteHook,
+	PageUndeleteCompleteHook,
 	HtmlPageLinkRendererEndHook
 {
 	/** @var MentionParser */
@@ -262,7 +262,17 @@ class ProcessMentions implements
 	/**
 	 * @inheritDoc
 	 */
-	public function onArticleUndelete( $title, $create, $comment, $oldPageId, $restoredPages ) {
+	public function onPageUndeleteComplete(
+		ProperPageIdentity $page,
+		Authority $restorer,
+		string $reason,
+		RevisionRecord $restoredRev,
+		ManualLogEntry $logEntry,
+		int $restoredRevisionCount,
+		bool $created,
+		array $restoredPageIds
+	): void {
+		$title = Title::newFromPageIdentity( $page );
 		if ( $title->getContentModel() !== CONTENT_MODEL_WIKITEXT ) {
 			// For now only support wikitext
 			return;

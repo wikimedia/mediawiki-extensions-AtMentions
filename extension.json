@@ -84,7 +84,7 @@
 		"ParserFirstCallInit": "processTags",
 		"PageMoveComplete": "processMentions",
 		"PageDeleteComplete": "processMentions",
-		"ArticleUndelete": "processMentions",
+		"PageUndeleteComplete": "processMentions",
 		"BSEntitySaveComplete": "processMentionsInEntities",
 		"BSEntityDelete": "processMentionsInEntities"
 	},
