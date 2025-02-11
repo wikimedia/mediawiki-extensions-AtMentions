@@ -3,6 +3,7 @@
 use MediaWiki\Content\WikitextContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use Wikimedia\Rdbms\IResultWrapper;
 
