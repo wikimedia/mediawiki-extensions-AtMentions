@@ -5,5 +5,9 @@
 		]
 	},
 	"at-mentions-inspector-title": "E Benotzer ernimmen",
-	"at-mentions-mentionslist-header-all": "{{GENDER:$2|De Benotzer|D'Benotzerin}} [[User:$2|$2]] gouf op dëse Säiten ernimmt:"
+	"at-mentions-tag-item-actor": "{{GENDER:$1|vum [[User:$1|$1]]}}",
+	"at-mentions-mentionslist-header-mine-all": "Dir sidd op dëser Säit ernimmt ginn",
+	"at-mentions-mentionslist-header-all": "{{GENDER:$2|De Benotzer|D'Benotzerin}} [[User:$2|$2]] gouf op dëse Säiten ernimmt:",
+	"at-mentions-mention-notification-message": "huet Iech op der Säit $2 {{GENDER:$1|ernimmt}}",
+	"at-mentions-mention-notification-key": "Dir sidd ernimmt ginn"
 }
