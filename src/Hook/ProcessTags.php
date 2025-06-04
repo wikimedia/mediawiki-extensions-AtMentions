@@ -36,7 +36,6 @@ class ProcessTags implements ParserFirstCallInitHook {
 	 * @param MWParser $parser
 	 *
 	 * @return bool|void
-	 * @throws \MWException
 	 */
 	public function onParserFirstCallInit( $parser ): bool {
 		$parser->setHook( 'mentionslist', [ $this, 'render' ] );
