@@ -9,8 +9,8 @@ use MediaWiki\Html\Html;
 use MediaWiki\Language\Language;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Message\Message;
+use MediaWiki\Parser\Parser as MWParser;
 use MediaWiki\User\UserFactory;
-use Parser as MWParser;
 
 class ProcessTags implements ParserFirstCallInitHook {
 
