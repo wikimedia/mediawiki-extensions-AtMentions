@@ -41,8 +41,10 @@
 		"AtMentions": "i18n"
 	},
 	"AutoloadNamespaces": {
-		"AtMentions\\": "src/",
-		"AtMentions\\Tests\\": "tests/phpunit"
+		"AtMentions\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
+		"AtMentions\\Tests\\": "tests/phpunit/"
 	},
 	"ResourceModules": {
 		"ext.mentions.ve": {
