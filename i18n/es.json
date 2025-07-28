@@ -4,6 +4,7 @@
 			"Agusbou2015",
 			"Ciencia Al Poder",
 			"Eulalio",
+			"Matma Rex",
 			"No se",
 			"Rodney Araujo",
 			"Shyla summers"
@@ -17,8 +18,8 @@
 	"at-mentions-tag-item-actor": "{{GÉNERO:$1|por [[User:$1]]}}",
 	"at-mentions-mentionslist-header-mine-all": "Usted ha sido mencionado en esta página",
 	"at-mentions-mentionslist-header-mine": "En la(s) última(s) {{PLURAL:$1|día|$1 días}}, usted ha sido mencionado en estas páginas:",
-	"at-mentions-mentionslist-header-all": "Usuario {{GÉNERO:$2|[[User:$2]] ha sido mencionado en estas páginas}}:",
-	"at-mentions-mentionslist-header": "En la(s) última(s) {{PLURAL:$1|día|$1 días}}, {{GÉNERO:$2|[[User:$2]] ha sido mencionado en estas páginas}}:",
+	"at-mentions-mentionslist-header-all": "Usuario {{GENDER:$2|[[User:$2]] ha sido mencionado en estas páginas}}:",
+	"at-mentions-mentionslist-header": "En la(s) última(s) {{PLURAL:$1|día|$1 días}}, {{GENDER:$2|[[User:$2]] ha sido mencionado en estas páginas}}:",
 	"at-mentions-mention-notification-message": "{{GENDER:$1|te mencionó}} en la página $2",
 	"at-mentions-mention-notification-key": "Has sido mencionado",
 	"at-mentions-mention-in-entity-notification-key": "Usted se ha mencionado en un comentario o un post",
