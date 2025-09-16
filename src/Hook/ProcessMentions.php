@@ -109,7 +109,7 @@ class ProcessMentions implements
 		if ( $origLabel === $targetTitle->getPrefixedText() || $origLabel === $targetTitle->getPrefixedDBkey() ) {
 			$user = $this->userFactory->newFromName( $targetTitle->getText() );
 			if ( $user ) {
-				$text = new HtmlArmor( $user->getRealName() ?: $user->getName() );
+				$text = $user->getRealName() ?: $user->getName();
 			}
 		}
 		$attribs['style'] = 'background-color: #e5e4ff; border: 1px solid #acaeff;' .
