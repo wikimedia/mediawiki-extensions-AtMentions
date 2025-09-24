@@ -128,7 +128,7 @@ class MentionStore {
 				'um_rev' => $revisionRecord->getId(),
 			],
 			[
-				'um_page' => $revisionRecord->getPageAsLinkTarget()->getArticleID()
+				'um_page' => $revisionRecord->getPageId()
 			],
 			__METHOD__
 		);
