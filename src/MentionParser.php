@@ -25,7 +25,6 @@ class MentionParser {
 	 * @param string $text
 	 *
 	 * @return array [ 'text' => '[[User:...]]', 'user' => User object, 'label' => 'whatever is in [[User:...|label]]' ]
-	 *
 	 */
 	public function parse( string $text ): array {
 		$mentions = [];
