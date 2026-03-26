@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eduardoaddad",
 			"Juwan"
 		]
 	},
@@ -18,5 +19,7 @@
 	"at-mentions-echo-mention-notification-email-body": "Você foi mencionado na página $1",
 	"at-mentions-echo-mention-entity-notification-summary": "Você foi mencionado em um comentário ou publicação de $1",
 	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2|$3}} te mencionou em um comentário ou publicação na página $1",
-	"at-mentions-echo-mention-entity-notification-email-body": "Você foi mencionado em um comentário ou publicação de $1"
+	"at-mentions-echo-mention-entity-notification-email-body": "Você foi mencionado em um comentário ou publicação de $1",
+	"at-mentions-mention-notification-key": "Você foi mencionado",
+	"at-mentions-mention-in-entity-notification-key": "Você foi mencionado em um comentário ou postagem."
 }
