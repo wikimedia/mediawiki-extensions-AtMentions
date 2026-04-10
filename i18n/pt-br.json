@@ -10,7 +10,7 @@
 	"at-mentions-inspector-title-add": "Adicionar uma legenda",
 	"at-mentions-inspector-title-edit": "Editar menção de usuário",
 	"at-mentions-ci-title": "Ver menção",
-	"at-mentions-tag-item-actor": "{{GENDER:$1|por [[User:$1]]}}",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|por [[User:$1|$1]]}}",
 	"at-mentions-tag-item-time": "em $1",
 	"at-mentions-toolbar-tool-title": "Adicionar uma legenda",
 	"at-mentions-echo-mention-notification-summary": "Você foi mencionado na página $1",
@@ -21,5 +21,6 @@
 	"at-mentions-echo-mention-entity-notification-subject": "{{GENDER:$2|$3}} te mencionou em um comentário ou publicação na página $1",
 	"at-mentions-echo-mention-entity-notification-email-body": "Você foi mencionado em um comentário ou publicação de $1",
 	"at-mentions-mention-notification-key": "Você foi mencionado",
-	"at-mentions-mention-in-entity-notification-key": "Você foi mencionado em um comentário ou postagem."
+	"at-mentions-mention-in-entity-notification-key": "Você foi mencionado em um comentário ou postagem.",
+	"at-mentions-mentionslist-header-mine-all": "Você foi mencionado nesta página"
 }
