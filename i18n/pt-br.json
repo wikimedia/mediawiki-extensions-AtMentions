@@ -12,8 +12,8 @@
 	"at-mentions-ci-title": "Ver menção",
 	"at-mentions-tag-item-actor": "{{GENDER:$1|por [[User:$1|$1]]}}",
 	"at-mentions-tag-item-time": "em $1",
+	"at-mentions-mentionslist-header-mine-all": "Você foi mencionado nesta página",
 	"at-mentions-mention-notification-key": "Você foi mencionado",
 	"at-mentions-mention-in-entity-notification-key": "Você foi mencionado em um comentário ou postagem.",
-	"at-mentions-toolbar-tool-title": "Adicionar uma legenda",
-	"at-mentions-mentionslist-header-mine-all": "Você foi mencionado nesta página"
+	"at-mentions-toolbar-tool-title": "Adicionar uma legenda"
 }
