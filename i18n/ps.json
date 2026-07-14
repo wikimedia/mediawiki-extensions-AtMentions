@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"at-mentions-desc": "يو کارن يادونه ورگډول",
+	"at-mentions-inspector-title": "کارن يادول",
+	"at-mentions-inspector-title-add": "يادونه ورگډول",
+	"at-mentions-inspector-title-edit": "کارن يادونه سمول",
+	"at-mentions-ci-title": "کارن يادونه",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|د [[User:$1|$1]] له‌خوا}}",
+	"at-mentions-tag-item-time": "په $1",
+	"at-mentions-mentionslist-header-mine-all": "تاسو په دې مخ کې يادشوي ياست",
+	"at-mentions-mentionslist-header-mine": "په {{PLURAL:$1|تېره يوه ورځ|$1 ورځو}} کې، ستاسو يادونه په دې مخونو کې شوې ده:",
+	"at-mentions-mentionslist-header-all": "په لاندې مخونو کې د کارن {{GENDER:$2|[[User:$2|$2]] يادونه شوې ده}}:",
+	"at-mentions-mentionslist-header": "په {{PLURAL:$1|تېره ورځ|$1 تېرو ورځو}} کې {{GENDER:$2|[[User:$2|$2]] په دې مخونو کې ياد شوی دی}}:",
+	"at-mentions-mention-notification-message": "تاسو په $2 مخ کې {{GENDER:$1|ياد کړي ياست}}",
+	"at-mentions-mention-notification-key": "ستاسو يادونه شوې ده",
+	"at-mentions-mention-in-entity-notification-key": "ستاسو يادونه په يوه څرگندونه يا پوسټ کې شوې ده",
+	"at-mentions-mention-in-entity-notification-message": "تاسو په يوه څرگندونه يا پوسټ \"$3\" کې په $2 مخ کې {{GENDER:$1|ياد کړي ياست}}",
+	"at-mentions-toolbar-tool-title": "يادونه ورگډه کړئ"
+}
