@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"at-mentions-desc": "Ku dar xuska isticmaale",
+	"at-mentions-inspector-title": "Xus isticmaale",
+	"at-mentions-inspector-title-add": "Ku dar xus",
+	"at-mentions-inspector-title-edit": "Wax ka beddel xuska isticmaalaha",
+	"at-mentions-ci-title": "Xuska isticmaalaha",
+	"at-mentions-tag-item-actor": "{{GENDER:$1|waxaa sameeyay [[User:$1|$1]]}}",
+	"at-mentions-tag-item-time": "ee $1",
+	"at-mentions-mentionslist-header-mine-all": "Waxaa lagugu xusay boggan",
+	"at-mentions-mentionslist-header-mine": "{{PLURAL:$1|Maalintii u dambaysay|$1 maalmood ee u dambeeyay}}, waxaa lagugu xusay boggagan:",
+	"at-mentions-mentionslist-header-all": "Isticmaalaha {{GENDER:$2|[[User:$2|$2]] waxaa lagugu xusay boggagan}}",
+	"at-mentions-mentionslist-header": "{{PLURAL:$1|Maalintii u dambaysay|$1 maalmood ee u dambeeyay}}, {{GENDER:$2|[[User:$2|$2]] waxaa lagugu xusay boggagan}}:",
+	"at-mentions-mention-notification-message": "{{GENDER:$1|kugu xusay}} bogga $2",
+	"at-mentions-mention-notification-key": "Waxaa lagugu xusay",
+	"at-mentions-mention-in-entity-notification-key": "Waxaa lagugu xusay faallo ama qoraal",
+	"at-mentions-mention-in-entity-notification-message": "{{GENDER:$1|kugu xusay}} faallo ama qoraal \"$3\" oo ku yaal bogga $2",
+	"at-mentions-toolbar-tool-title": "Ku dar xus"
+}
