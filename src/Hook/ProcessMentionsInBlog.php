@@ -3,7 +3,7 @@
 namespace AtMentions\Hook;
 
 use AtMentions\Event\UserMentionInEntity;
-use ManualLogEntry;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\Page\ProperPageIdentity;
 use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionRecord;
