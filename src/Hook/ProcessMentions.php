@@ -6,7 +6,6 @@ use AtMentions\Event\UserMention;
 use AtMentions\Mention;
 use AtMentions\MentionParser;
 use AtMentions\MentionStore;
-use HtmlArmor;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\Hook\ParserBeforeInternalParseHook;
@@ -26,6 +25,7 @@ use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
+use Wikimedia\HtmlArmor\HtmlArmor;
 
 class ProcessMentions implements
 	ParserBeforeInternalParseHook,
